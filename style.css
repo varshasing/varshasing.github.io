@@ -17,7 +17,7 @@ header, footer {
 }
 
 .card {
-  background: white;
+  background: beige;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ header, footer {
 }
 
 .modal-content {
-  background: white;
+  background: beige;
   margin: 10% auto;
   padding: 30px;
   border-radius: 8px;
@@ -55,6 +55,7 @@ header, footer {
   max-width: 100%;
   margin-top: 20px;
   border-radius: 6px;
+  position: center;
 }
 
 .close {
