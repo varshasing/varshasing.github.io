@@ -29,6 +29,17 @@ header, footer {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+.card-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0 8px;
+  overflow: hidden;
+}
 .card:hover {
   transform: scale(1.02);
 }
@@ -39,6 +50,13 @@ header, footer {
   object-fit: cover;
   border-radius: 8px;
   display: block;
+}
+.card-desc {
+  height: 100px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
 }
 
 .modal {
