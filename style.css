@@ -28,6 +28,12 @@ header, footer {
   transform: scale(1.02);
 }
 
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .modal {
   display: none;
   position: fixed;
