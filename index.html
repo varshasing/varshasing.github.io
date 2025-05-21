@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varsha’s Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Varsha’s Engineering Portfolio</h1>
+    <p>Computer & Biomedical Engineering w/ ML concentration @ Boston University</p>
+  </header>
+
+  <section class="card-grid">
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal1')">
+      <h3 class="card-title">Speech to Emotion Recognition</h3>
+      <img src="images/ser.jpg" alt="SER project" />
+      <p>Classifying 6 emotions in English speaking audio with various Neural Network architectures. <strong>74.3%</strong> test accuracy on best model.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal2')">
+      <h3 class="card-title">Implementing and Optimizing Ray Tracing in C++</h3>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <p class="card-desc">Optimizing serial Ray Tracing on CPU and GPU. <strong>~2.5x and 200x</strong> speedup compared to serial.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal3')">
+      <h3 class="card-title">Remote-Controlled Quadruped with Live Camera Feed and GUI Control</h3>
+      <img src="images/puppy-pi.jpeg" alt="Puppy-Pi project" />
+      <p class="card-desc">Browser-based remote control system for the HiWonder PuppyPi with environment monitoring for overriding unsafe movement commands.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal4')">
+      <h3 class="card-title">BeagleBone Black Traffic Light Controller</h3>
+      <img src="images/embedded-traffic.png" alt="Traffic-Light" />
+      <p class="card-desc">Traffic light circuit written in kernel space, using GPIOs for 3 traffic modes and a preemptive pedestrian mode.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal5')">
+      <h3 class="card-title">Jailbreaking Large Language Models</h3>
+      <img src="images/jailbreaking-llms.png" alt="LLM project" />
+      <p class="card-desc">Conducting comparative analysis of vulnerabilities in chatbots with PAIR. Develooped a modular defense framework, delivering a safe responses for <strong>79%</strong> of jailbreaking prompts.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal6')">
+      <h3 class="card-title">File Allocation Table-based File System</h3>
+      <img src="images/OS-FAT.HEIC" alt="OS-FAT" />
+      <p class="card-desc">Single root directory on a virtual disk that offers a set of basic file system calls to applications. Optimizied file storage capacity by <strong>95%</strong>.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal7')">
+      <h3 class="card-title">Operating Systems C Library Implementation</h3>
+      <p class="card-desc">Implementing POXIS threads API with preemtive scheduling. Extended library with mulithreading, inter-thread communication, and thread-local-storage with COW.</p>
+
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal8')">
+      <h3 class="card-title">Simple Shell</h3>
+      <p class="card-desc">Basic shell which is able to execute commands, redirect the standard input/output of commands to files, pipe the output of commands to other commands, and carry out commands in the background.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal9')">
+      <h3 class="card-title">Dual-Tone Multi-Frequency Decoder</h3>
+      <p class="card-desc">Creating structures to decode DTMF signals using bandpass filters..</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal10')">
+      <h3 class="card-title">FPGA Calculator</h3>
+      <p class="card-desc">4-bit basic ALU with 12 different operations, result on 7-segment display.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal11')">
+      <h3 class="card-title">Smart Ambient Temperature Monitor</h3>
+      <p class="card-desc">Arudino-programmed temperature sensor alerting users of unsafe temperatures.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal12')">
+      <h3 class="card-title">MunchMap Odyssey</h3>
+      <p class="card-desc">Flask-based web application for road trip planning.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal13')">
+      <h3 class="card-title">Limited Dexterity Smart Desk Lamp</h3>
+      <p class="card-desc">Motion-driven controlled desk lamp for users with limited dexterity.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal14')">
+      <h3 class="card-title">5-stage pipelined CPU with forwarding and Hazard Detection Unit</h3>
+      <p class="card-desc">Verilog implementation of 5-stage CPU vwith fowarding and Hazard Detection Unit, verified with simulation..</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="card" onclick="openModal('modal15')">
+      <h3 class="card-title">Reinforcement Learning-based Blackjack Agent</h3>
+      <p class="card-desc">Blackjack agent utilizing Q-learning algorithm to achieve ~<strong>42.1%</strong> win rate.</p>
+    </div>
+
+  </section>
+
+  <!-- Modal1 -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Speech to Emotion Recognition</h2>
+      <p>Using a deep learning architecture to identify the underlying emootion given some English speaking audio, formally known as Speech to Emotion Recognition (SER). Our model differentiates between anger, disgust, fear, happiness, sadness, and neutrality. We set a baseline model to base our improvements against, as a CNN. We tried a variety of architectures with a CNN with GRU, CNN-Transformer, ResNet, Mamba, and hybrid Mamba-CNN model. Our Mamba-CNN model performed best with an improvement of of 1.29% As compared to the base CNN.</p>
+      <p><strong>Tech:</strong> Python, TensorFlow, Deep Learning, Audio Preprocessing</p>
+      <img src="images/ser.jpg" alt="SER project" />
+      <a href="https://github.com/Anish701/EC523-Speech-Emotion-Recognition" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal2 -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Implementing and Optimizing Ray Tracing in C++</h2>
+      <p>Optimizing Ray Tracing code from 'Ray Tracing from Ray Tracing in One Weekend'. Benchmarked serial implementation, analyzed and identified bottlenecks and areas for optimizations, andd introduced optimizations for both CPU (OpenMP) and GPU (constant, shared, and texture memory) versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+    <!-- Modal3 -->
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Remote-Controlled Quadruped with Live Camera Feed and GUI Control</h2>
+        <p>Browser-based remote control system for the HiWonder PuppyPi. Utilized manufacture-specific Python libraries for precise control of servomotors and behavior sequencing, enables users to command the robot via keyboard inputs and UI buttons throough a React frontend. Real-time feedbacl is adchieved through an onboard USB camera streamed through MJPG-Streamer, with LiDAR sensor monitoring environment to ovveride unsafe moveement commands. Communicates with front-end using WebSocket (TCP) communication.</p>
+        <p><strong>Tech:</strong> Embedded Systems, Raspberry Pi, Python, React, API, Networking</p>
+        <img src="images/puppy-pi.jpeg" alt="Puppy-Pi project" />
+        <a href="https://github.com/varshasing/ec535-final-project" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+  <!-- Modal4 -->
+  <div class="modal" id="modal4">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>BeagleBone Black Traffic Light Controller</h2>
+      <p>Linux kernel module that controls a model traffic light via the BeagleBone Black's GPIO pins: some pins are programmed as input (reading from buttons) and some others are as outputs (controlling LEDs). The pins are controlled entirely from kernelspace, there is no userspace component in this project. We have 3 operational modes (as well as a pedestrian call button and pedestrian mode), as well as a readable and writable character device for viewing information about the current status, and writing to change the current cycle rate. Finaly, we added a "lightbulb check", which lights up all three traffic lights as long as both buttons are held down simultaneously.</p>
+      <p><strong>Tech:</strong> Kernel programming, BeagleBone Black, C, Circuit-building</p>
+      <img src="images/embedded-traffic.png" alt="Traffic-Light" />
+      <a href="https://github.com/JamesKnee/EC535/tree/main/Lab4" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Modal5 -->
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h2>Jailbreaking Large Language Models</h2>
+      <p>Assessed the scope and severity of jailbreaking in commonly-used models and propose a practical workflow to support safer interactions with LLMs. We began by conducting comparitive analysis of jailbreak vulnerabilities across several leading chatbot platforms, evaluating their susceptability to prompt-based attacks. We quantified the success rate of attempts and categorized the types of content or actions that emerge from the exploits attempted through PAIR. We then developed a modular defense framework that integrates prompt validaition and response filtering to reduce the likelihoood of unsafe outputs with feedback loops and continuous monitoring.</p>
+      <p><strong>Tech:</strong> Python, Cybersecurity, React, APIs</p>
+      <img src="images/jailbreaking-llms.png" alt="LLM project" />
+      <a href="https://github.com/pzhao0/PAIR" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal6 -->
+  <div class="modal" id="modal6">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+      <h2>File Allocation Table-based File System</h2>
+      <p>Implemented a simple file system on top of a virtual disk. Implementing a library that offers a set of basic file system calls (open, close, create, delete, read, write, get file size, list files, lseek, truncate) to applications. The virtual disk has 8192 blocks, each holding 4KB (32 MiB), with a maximum file size of 16 MiB. File system implemented usiing FAT design, with meta-information blocks for the super block and directory, and storing file descriptors. Optimized partition to store 31.2 MiB of file content, compared to required 16 MiB.</p>
+      <p><strong>Tech:</strong> C, GDB, Operating Systems, Bash Scripting, Make</p>
+      <img src="images/OS-FAT.HEIC" alt="OS-FAT" />
+      <a href="https://github.com/varshasing/File-System" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal7 -->
+  <div class="modal" id="modal7">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal7')">&times;</span>
+      <h2>WIP Modal 7</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal8 -->
+  <div class="modal" id="modal8">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal8')">&times;</span>
+      <h2>WIP Modal 8</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal9 -->
+  <div class="modal" id="modal9">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal9')">&times;</span>
+      <h2>WIP Modal 9</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal10 -->
+  <div class="modal" id="modal10">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal10')">&times;</span>
+      <h2>WIP Modal 10</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal1 -->
+  <div class="modal" id="modal11">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('moda11')">&times;</span>
+      <h2>WIP Modal 11</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal12 -->
+  <div class="modal" id="modal12">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal12')">&times;</span>
+      <h2>WIP Modal 12</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal13 -->
+  <div class="modal" id="modal13">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal13')">&times;</span>
+      <h2>WIP Modal 13</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal14 -->
+  <div class="modal" id="modal14">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal14')">&times;</span>
+      <h2>WIP modal 14</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal15 -->
+  <div class="modal" id="modal15">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal15')">&times;</span>
+      <h2>WIP Modal 15</h2>
+      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
+      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
+      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact: varshasinghtx@gmail.com | <a href="https://github.com/varshasing">GitHub</a> | <a href="https://linkedin.com/in/var-singh">LinkedIn</a></p>
+
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = function(event)  {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) modal.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
