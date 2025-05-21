@@ -29,7 +29,9 @@ header, footer {
 }
 
 .modal {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 10;
   left: 0;
