@@ -25,13 +25,6 @@ header, footer {
   transition: transform 0.2s ease;
 }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-}
 .card:hover {
   transform: scale(1.02);
 }
