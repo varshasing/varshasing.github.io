@@ -17,6 +17,11 @@ header, footer {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 500px;
+  overflow: hidden;
   background: white;
   padding: 20px;
   border-radius: 12px;
