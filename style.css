@@ -20,7 +20,7 @@ header, footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   background: white;
   padding: 20px;
@@ -53,8 +53,6 @@ header, footer {
 .card-desc {
   height: 100px;
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-top: 10px;
 }
 
