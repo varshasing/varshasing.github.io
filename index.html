@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Varsha’s Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -77,7 +78,7 @@
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal10')">
-      <<h3 class="card-title">FPGA Calculator</h3>
+      <h3 class="card-title">FPGA Calculator</h3>
       <p class="card-desc">4-bit basic ALU with 12 different operations, result on 7-segment display.</p>
     </div>
 
@@ -133,7 +134,9 @@
       <p>Optimizing Ray Tracing code from 'Ray Tracing from Ray Tracing in One Weekend'. Benchmarked serial implementation, analyzed and identified bottlenecks and areas for optimizations, andd introduced optimizations for both CPU (OpenMP) and GPU (constant, shared, and texture memory) versions of the code.</p>
       <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
       <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -145,7 +148,9 @@
         <p>Browser-based remote control system for the HiWonder PuppyPi. Utilized manufacture-specific Python libraries for precise control of servomotors and behavior sequencing, enables users to command the robot via keyboard inputs and UI buttons throough a React frontend. Real-time feedbacl is adchieved through an onboard USB camera streamed through MJPG-Streamer, with LiDAR sensor monitoring environment to ovveride unsafe moveement commands. Communicates with front-end using WebSocket (TCP) communication.</p>
         <p><strong>Tech:</strong> Embedded Systems, Raspberry Pi, Python, React, API, Networking</p>
         <img src="images/puppy-pi.jpeg" alt="Puppy-Pi project" />
-        <a href="https://github.com/varshasing/ec535-final-project" target="_blank">View on GitHub</a>
+        <a href="https://github.com/varshasing/ec535-final-project" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </div>
 
@@ -157,7 +162,9 @@
       <p>Linux kernel module that controls a model traffic light via the BeagleBone Black's GPIO pins: some pins are programmed as input (reading from buttons) and some others are as outputs (controlling LEDs). The pins are controlled entirely from kernelspace, there is no userspace component in this project. We have 3 operational modes (as well as a pedestrian call button and pedestrian mode), as well as a readable and writable character device for viewing information about the current status, and writing to change the current cycle rate. Finaly, we added a "lightbulb check", which lights up all three traffic lights as long as both buttons are held down simultaneously.</p>
       <p><strong>Tech:</strong> Kernel programming, BeagleBone Black, C, Circuit-building</p>
       <img src="images/embedded-traffic.png" alt="Traffic-Light" />
-      <a href="https://github.com/JamesKnee/EC535/tree/main/Lab4" target="_blank">View on GitHub</a>
+      <a href="https://github.com/JamesKnee/EC535/tree/main/Lab4" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
   <!-- Modal5 -->
@@ -168,7 +175,9 @@
       <p>Assessed the scope and severity of jailbreaking in commonly-used models and propose a practical workflow to support safer interactions with LLMs. We began by conducting comparitive analysis of jailbreak vulnerabilities across several leading chatbot platforms, evaluating their susceptability to prompt-based attacks. We quantified the success rate of attempts and categorized the types of content or actions that emerge from the exploits attempted through PAIR. We then developed a modular defense framework that integrates prompt validaition and response filtering to reduce the likelihoood of unsafe outputs with feedback loops and continuous monitoring.</p>
       <p><strong>Tech:</strong> Python, Cybersecurity, React, APIs</p>
       <img src="images/jailbreaking-llms.png" alt="LLM project" />
-      <a href="https://github.com/pzhao0/PAIR" target="_blank">View on GitHub</a>
+      <a href="https://github.com/pzhao0/PAIR" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -180,7 +189,9 @@
       <p>Implemented a simple file system on top of a virtual disk. Implementing a library that offers a set of basic file system calls (open, close, create, delete, read, write, get file size, list files, lseek, truncate) to applications. The virtual disk has 8192 blocks, each holding 4KB (32 MiB), with a maximum file size of 16 MiB. File system implemented usiing FAT design, with meta-information blocks for the super block and directory, and storing file descriptors. Optimized partition to store 31.2 MiB of file content, compared to required 16 MiB.</p>
       <p><strong>Tech:</strong> C, GDB, Operating Systems, Bash Scripting, Make</p>
       <img src="images/OS-FAT.HEIC" alt="OS-FAT" />
-      <a href="https://github.com/varshasing/File-System" target="_blank">View on GitHub</a>
+      <a href="https://github.com/varshasing/File-System" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
