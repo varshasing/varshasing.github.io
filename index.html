@@ -62,7 +62,6 @@
       <h3 class="card-title">Operating Systems C Library Implementation</h3>
       <img src="images/tls-os.png" alt="OS project" />
       <p class="card-desc">Implementing POSIX threads API with preemtive scheduling. Extended library with mulithreading, inter-thread communication, and thread-local-storage with COW (copy-on-write).</p>
-
     </div>
 
     <!-- Project Card -->
@@ -82,7 +81,7 @@
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal10')">
       <h3 class="card-title">FPGA Calculator</h3>
-      <img src="images/fpga-311.jpg" alt="FPGA-ALU project" />
+      <img src="images/fpga.jpg" alt="FPGA-ALU project" />
       <p class="card-desc">4-bit basic ALU with 12 different operations, result on 7-segment display.</p>
     </div>
 
@@ -109,7 +108,7 @@
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal14')">
-      <h3 class="card-title">5-stage pipelined CPU with forwarding and Hazard Detection Unit</h3>
+      <h3 class="card-title">5-Stage Pipelined CPU</h3>
       <img src="images/forwarding-413.png" alt="pipelinedCPU project" />
       <p class="card-desc">Verilog implementation of 5-stage CPU with fowarding and Hazard Detection Unit, verified with simulation.</p>
     </div>
@@ -131,7 +130,9 @@
       <p>Using a deep learning architecture to identify the underlying emootion given some English speaking audio, formally known as Speech to Emotion Recognition (SER). Our model differentiates between anger, disgust, fear, happiness, sadness, and neutrality. We set a baseline model to base our improvements against, as a CNN. We tried a variety of architectures with a CNN with GRU, CNN-Transformer, ResNet, Mamba, and hybrid Mamba-CNN model. Our Mamba-CNN model performed best with an improvement of of 1.29% As compared to the base CNN.</p>
       <p><strong>Tech:</strong> Python, TensorFlow, Deep Learning, Audio Preprocessing</p>
       <img src="images/ser.jpg" alt="SER project" />
-      <a href="https://github.com/Anish701/EC523-Speech-Emotion-Recognition" target="_blank">View on GitHub</a>
+      <a href="https://github.com/Anish701/EC523-Speech-Emotion-Recognition" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -208,11 +209,13 @@
   <div class="modal" id="modal7">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal7')">&times;</span>
-      <h2>WIP Modal 7</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Operating Systems C Library Implementation</h2>
+      <p>Developed a user-level threading library for Linux in C, supporting Round Robin scheduling, thread-local storage, and advanced memory management features such as paged memory, page fault handling, and Copy-on-Write. Designed and iimplementing custom synchronization primitives. including semaphores and barriers, ensuring thread safety and preventing race conditions. Created and automated comprehensive unit tests using Make and bash scripting to validate memory integrity, concurrency handling, andd overall system reliability.</p>
+      <p><strong>Tech:</strong> C, Make, GDB, Bash Scripting, Operating Systems</p>
+      <img src="images/tls-os.png" alt="OS project" />
+      <a href="https://github.com/stars/varshasing/lists/operating-systems" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -220,11 +223,13 @@
   <div class="modal" id="modal8">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal8')">&times;</span>
-      <h2>WIP Modal 8</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Simple Shell</h2>
+      <p>Developed Bash Shell in C to better understanding system calls, redirection, and how to create children processes without risk of memory leaks. The shell supports standard redirection, piping, and employs a signal handler for background processes. Additionally, developed a helper string parser to tokenize user input and handle complex input commands. Used REPL paradigm to effectively handle process creation, synchronization, and redirection.</p>
+      <p><strong>Tech:</strong> C, Make, GDB, Operating Systems</p>
+      <img src="images/shell.png" alt="Shell project" />
+      <a href="https://github.com/varshasing/SimpleShell" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -232,11 +237,13 @@
   <div class="modal" id="modal9">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal9')">&times;</span>
-      <h2>WIP Modal 9</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Dual-Tone Multi-Frequency Decoder</h2>
+      <p>Matlab study in Dual-Tone Multi-Frequency (DTMF) as used in phone dialing, and is usd worldwide for telephone signaling to the call switching center in the voice frequency band. When the input to a filter bank is a DTMF signal, the output from two of the bandpass filters should be large and the rest should be small. If two outputs are large, then it is understood to be the corresponding frequencies. This project has two sections. The first focuses on generating telephone keypad tones, analyzing telephone keypad tones with the Fourier Transform, and designing a telephone keypad decoder. The second section analyzes and designs a simple bandpass filter to be used in the filter bank of a DTMF decoder, and creates and tests a complete DTMF decoding system.</p>
+      <p><strong>Tech:</strong> Matlab, Signal Processing</p>
+      <img src="images/dtmf-keypad.jpg" alt="DTMF project" />
+      <a href="https://github.com/varshasing/dtmf-decoder" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -244,11 +251,13 @@
   <div class="modal" id="modal10">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal10')">&times;</span>
-      <h2>WIP Modal 10</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>FPGA Calculator</h2>
+      <p>Verilog HDL project with Xilinx NEXYS FPGA integration designing and implementing ALU calculator, supporting 15 arithmetic and logical operations with overflow detection. Developed finite state machine (FSM) for displaying computed results and opcodes on seven-segment display. Utilized Vivado's synthesis, simulation, and routing tools to optimize digital logic circuits..</p>
+      <p><strong>Tech:</strong> Verilog, FPGA/p>
+      <img src="images/fpga.jpg" alt="FPGA-ALU project" />
+      <!--<a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>-->
     </div>
   </div>
 
@@ -256,11 +265,13 @@
   <div class="modal" id="modal11">
     <div class="modal-content">
       <span class="close" onclick="closeModal('moda11')">&times;</span>
-      <h2>WIP Modal 11</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Smart Ambient Temperature Monitor</h2>
+      <p>Arduino-Uno programmed temperature monitor with a LED indicator, buzzer alarm, and LCD I2C display displaying temperature. Design process included developing engineering sketches with precision measurements, CAD prototype design synthesized in OnShape, prototyping and simulating circuit diagram with digital twin in TinkerCAD, parsing spec sheets to choose resistor values and choose wire gauges, and iterating designs of battery holder in OnShape.</p>
+      <p><strong>Tech:</strong> Embedded Systems, OnShape, TinkerCAD, Circuits, I2C, Engineering Design</p>
+      <img src="images/temperature-box.png" alt="temperature-box project" />
+      <!--<a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>-->
     </div>
   </div>
 
@@ -268,11 +279,13 @@
   <div class="modal" id="modal12">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal12')">&times;</span>
-      <h2>WIP Modal 12</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>MunchMap Odyssey</h2>
+      <p>Led the development of a Flask-based road trip planner: recommends specific restaurants along a personalized route based on user preferences for cuisine, budget, and travel details. Users can preview the route, select from a list of recommended restaurants, and export the itinerary to Google Maps for a seamless travel experience. Wrote custom JavaScript and Python scripts to integrate Yelp API, providing restaurants and filtering based on user preferences. Designed a Flask-based backend for efficient testing and deployment, enabling seamless communication between the front-end interface and external APIs. As project leader, managed group timelines and created Gantt chart to mitigate development dependencies.</p>
+      <p><strong>Tech:</strong> Python, Flask, JavaScript, HTML, CSSS</p>
+      <img src="images/munchmap.png" alt="MunchMap project" />
+      <a href="https://github.com/varshasing/MunchMap-Odyssey" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -281,10 +294,12 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal13')">&times;</span>
       <h2>Limited Dexterity Smart Desk Lamp</h2>
-      <p>The goal of this desk lamp is to provide users with mobility constraints an accessible, functional lamp that provides a full spectrum of visible lighting. The lamp requires no applied force. The device utiliizes a RTC module, 10W RGB, and a dual proximity and ambient light sensor. An Arduino UNO microcontroller drives the logic for our smart lamp. We housed our hardware in a 3D printed cylinder with an attached gooseneck, a laser-printed support, and a lampshade. Ultimately, we created a working prototype and reduced manufacturing costs by over <strong>~50%</strong>.</p>
+      <p>The goal of this desk lamp is to provide users with mobility constraints an accessible, functional lamp that provides a full spectrum of visible lighting. The lamp requires no applied force. The device utiliizes an RTC module, 10W RGB, and a dual proximity and ambient light sensor. An Arduino UNO microcontroller drives the logic for our smart lamp. We housed our hardware in a 3D printed cylinder with an attached gooseneck, a laser-printed support, and a lampshade. Ultimately, we created a working prototype and reduced manufacturing costs by over <strong>~50%</strong>.</p>
       <p><strong>Tech:</strong> Embedded Systems, Microcontroller Programming, SolidWorks, Circuit Design, Engineering Design</p>
       <img src="images/lamp-210.jpg" alt="Lamp project" />
-      <a href="https://github.com/varshasing/EK210" target="_blank">View on GitHub</a>
+      <a href="https://github.com/varshasing/EK210" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
