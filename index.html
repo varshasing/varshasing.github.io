@@ -47,68 +47,76 @@
     <div class="card" onclick="openModal('modal5')">
       <h3 class="card-title">Jailbreaking Large Language Models</h3>
       <img src="images/jailbreaking-llms.png" alt="LLM project" />
-      <p class="card-desc">Conducting comparative analysis of vulnerabilities in chatbots with PAIR. Develooped a modular defense framework, delivering a safe responses for <strong>79%</strong> of jailbreaking prompts.</p>
+      <p class="card-desc">Conducting comparative analysis of vulnerabilities in chatbots with PAIR. Developed a modular defense framework, delivering safe responses for <strong>79%</strong> of jailbreaking prompts.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal6')">
       <h3 class="card-title">File Allocation Table-based File System</h3>
-      <img src="images/OS-FAT.HEIC" alt="OS-FAT" />
+      <img src="images/OS-FAT.png" alt="OS-FAT" />
       <p class="card-desc">Single root directory on a virtual disk that offers a set of basic file system calls to applications. Optimizied file storage capacity by <strong>95%</strong>.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal7')">
       <h3 class="card-title">Operating Systems C Library Implementation</h3>
-      <p class="card-desc">Implementing POXIS threads API with preemtive scheduling. Extended library with mulithreading, inter-thread communication, and thread-local-storage with COW.</p>
-
+      <img src="images/tls-os.png" alt="OS project" />
+      <p class="card-desc">Implementing POSIX threads API with preemtive scheduling. Extended library with mulithreading, inter-thread communication, and thread-local-storage with COW (copy-on-write).</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal8')">
       <h3 class="card-title">Simple Shell</h3>
-      <p class="card-desc">Basic shell which is able to execute commands, redirect the standard input/output of commands to files, pipe the output of commands to other commands, and carry out commands in the background.</p>
+      <img src="images/shell.png" alt="Shell project" />
+      <p class="card-desc">Basic shell that can execute commands, redirect the standard input/output of commands to files, pipe the output of commands to other commands, and carry out commands in the background.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal9')">
       <h3 class="card-title">Dual-Tone Multi-Frequency Decoder</h3>
-      <p class="card-desc">Creating structures to decode DTMF signals using bandpass filters..</p>
+      <img src="images/dtmf-keypad.jpg" alt="DTMF project" />
+      <p class="card-desc">Creating structures to decode DTMF signals using bandpass filters.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal10')">
       <h3 class="card-title">FPGA Calculator</h3>
+      <img src="images/fpga.jpg" alt="FPGA-ALU project" />
       <p class="card-desc">4-bit basic ALU with 12 different operations, result on 7-segment display.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal11')">
       <h3 class="card-title">Smart Ambient Temperature Monitor</h3>
-      <p class="card-desc">Arudino-programmed temperature sensor alerting users of unsafe temperatures.</p>
+      <img src="images/temperature-box.png" alt="temperature-box project" />
+      <p class="card-desc">Arudino-programmed low-energy temperature sensor alerting users of unsafe temperatures.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal12')">
       <h3 class="card-title">MunchMap Odyssey</h3>
+      <img src="images/munchmap.png" alt="MunchMap project" />
       <p class="card-desc">Flask-based web application for road trip planning.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal13')">
       <h3 class="card-title">Limited Dexterity Smart Desk Lamp</h3>
+      <img src="images/lamp-210.jpg" alt="Lamp project" />
       <p class="card-desc">Motion-driven controlled desk lamp for users with limited dexterity.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal14')">
-      <h3 class="card-title">5-stage pipelined CPU with forwarding and Hazard Detection Unit</h3>
-      <p class="card-desc">Verilog implementation of 5-stage CPU vwith fowarding and Hazard Detection Unit, verified with simulation..</p>
+      <h3 class="card-title">5-Stage Pipelined CPU</h3>
+      <img src="images/forwarding-413.png" alt="pipelinedCPU project" />
+      <p class="card-desc">Verilog implementation of 5-stage CPU with fowarding and Hazard Detection Unit, verified with simulation.</p>
     </div>
 
     <!-- Project Card -->
     <div class="card" onclick="openModal('modal15')">
       <h3 class="card-title">Reinforcement Learning-based Blackjack Agent</h3>
+      <img src="images/rl-blackjack.png" alt="Blackjack project" />
       <p class="card-desc">Blackjack agent utilizing Q-learning algorithm to achieve ~<strong>42.1%</strong> win rate.</p>
     </div>
 
@@ -122,7 +130,9 @@
       <p>Using a deep learning architecture to identify the underlying emootion given some English speaking audio, formally known as Speech to Emotion Recognition (SER). Our model differentiates between anger, disgust, fear, happiness, sadness, and neutrality. We set a baseline model to base our improvements against, as a CNN. We tried a variety of architectures with a CNN with GRU, CNN-Transformer, ResNet, Mamba, and hybrid Mamba-CNN model. Our Mamba-CNN model performed best with an improvement of of 1.29% As compared to the base CNN.</p>
       <p><strong>Tech:</strong> Python, TensorFlow, Deep Learning, Audio Preprocessing</p>
       <img src="images/ser.jpg" alt="SER project" />
-      <a href="https://github.com/Anish701/EC523-Speech-Emotion-Recognition" target="_blank">View on GitHub</a>
+      <a href="https://github.com/Anish701/EC523-Speech-Emotion-Recognition" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -188,7 +198,7 @@
       <h2>File Allocation Table-based File System</h2>
       <p>Implemented a simple file system on top of a virtual disk. Implementing a library that offers a set of basic file system calls (open, close, create, delete, read, write, get file size, list files, lseek, truncate) to applications. The virtual disk has 8192 blocks, each holding 4KB (32 MiB), with a maximum file size of 16 MiB. File system implemented usiing FAT design, with meta-information blocks for the super block and directory, and storing file descriptors. Optimized partition to store 31.2 MiB of file content, compared to required 16 MiB.</p>
       <p><strong>Tech:</strong> C, GDB, Operating Systems, Bash Scripting, Make</p>
-      <img src="images/OS-FAT.HEIC" alt="OS-FAT" />
+      <img src="images/OS-FAT.png" alt="OS-FAT" />
       <a href="https://github.com/varshasing/File-System" class="github-link">
         <i class="fab fa-github"></i>
       </a>
@@ -199,11 +209,13 @@
   <div class="modal" id="modal7">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal7')">&times;</span>
-      <h2>WIP Modal 7</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Operating Systems C Library Implementation</h2>
+      <p>Developed a user-level threading library for Linux in C, supporting Round Robin scheduling, thread-local storage, and advanced memory management features such as paged memory, page fault handling, and Copy-on-Write. Designed and iimplementing custom synchronization primitives. including semaphores and barriers, ensuring thread safety and preventing race conditions. Created and automated comprehensive unit tests using Make and bash scripting to validate memory integrity, concurrency handling, andd overall system reliability.</p>
+      <p><strong>Tech:</strong> C, Make, GDB, Bash Scripting, Operating Systems</p>
+      <img src="images/tls-os.png" alt="OS project" />
+      <a href="https://github.com/stars/varshasing/lists/operating-systems" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -211,11 +223,13 @@
   <div class="modal" id="modal8">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal8')">&times;</span>
-      <h2>WIP Modal 8</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Simple Shell</h2>
+      <p>Developed Bash Shell in C to better understanding system calls, redirection, and how to create children processes without risk of memory leaks. The shell supports standard redirection, piping, and employs a signal handler for background processes. Additionally, developed a helper string parser to tokenize user input and handle complex input commands. Used REPL paradigm to effectively handle process creation, synchronization, and redirection.</p>
+      <p><strong>Tech:</strong> C, Make, GDB, Operating Systems</p>
+      <img src="images/shell.png" alt="Shell project" />
+      <a href="https://github.com/varshasing/SimpleShell" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -223,11 +237,13 @@
   <div class="modal" id="modal9">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal9')">&times;</span>
-      <h2>WIP Modal 9</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Dual-Tone Multi-Frequency Decoder</h2>
+      <p>Matlab study in Dual-Tone Multi-Frequency (DTMF) as used in phone dialing, and is usd worldwide for telephone signaling to the call switching center in the voice frequency band. When the input to a filter bank is a DTMF signal, the output from two of the bandpass filters should be large and the rest should be small. If two outputs are large, then it is understood to be the corresponding frequencies. This project has two sections. The first focuses on generating telephone keypad tones, analyzing telephone keypad tones with the Fourier Transform, and designing a telephone keypad decoder. The second section analyzes and designs a simple bandpass filter to be used in the filter bank of a DTMF decoder, and creates and tests a complete DTMF decoding system.</p>
+      <p><strong>Tech:</strong> Matlab, Signal Processing</p>
+      <img src="images/dtmf-keypad.jpg" alt="DTMF project" />
+      <a href="https://github.com/varshasing/dtmf-decoder" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -235,23 +251,27 @@
   <div class="modal" id="modal10">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal10')">&times;</span>
-      <h2>WIP Modal 10</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>FPGA Calculator</h2>
+      <p>Verilog HDL project with Xilinx NEXYS FPGA integration designing and implementing ALU calculator, supporting 15 arithmetic and logical operations with overflow detection. Developed finite state machine (FSM) for displaying computed results and opcodes on seven-segment display. Utilized Vivado's synthesis, simulation, and routing tools to optimize digital logic circuits..</p>
+      <p><strong>Tech:</strong> Verilog, FPGA<s/p>
+      <img src="images/fpga.jpg" alt="FPGA-ALU project" />
+      <!--<a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>-->
     </div>
   </div>
 
-  <!-- Modal1 -->
+  <!-- Modal11 -->
   <div class="modal" id="modal11">
     <div class="modal-content">
       <span class="close" onclick="closeModal('moda11')">&times;</span>
-      <h2>WIP Modal 11</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Smart Ambient Temperature Monitor</h2>
+      <p>Arduino-Uno programmed temperature monitor with a LED indicator, buzzer alarm, and LCD I2C display displaying temperature. Design process included developing engineering sketches with precision measurements, CAD prototype design synthesized in OnShape, prototyping and simulating circuit diagram with digital twin in TinkerCAD, parsing spec sheets to choose resistor values and choose wire gauges, and iterating designs of battery holder in OnShape.</p>
+      <p><strong>Tech:</strong> Embedded Systems, OnShape, TinkerCAD, Circuits, I2C, Engineering Design</p>
+      <img src="images/temperature-box.png" alt="temperature-box project" />
+      <!--<a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>-->
     </div>
   </div>
 
@@ -259,11 +279,13 @@
   <div class="modal" id="modal12">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal12')">&times;</span>
-      <h2>WIP Modal 12</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>MunchMap Odyssey</h2>
+      <p>Led the development of a Flask-based road trip planner: recommends specific restaurants along a personalized route based on user preferences for cuisine, budget, and travel details. Users can preview the route, select from a list of recommended restaurants, and export the itinerary to Google Maps for a seamless travel experience. Wrote custom JavaScript and Python scripts to integrate Yelp API, providing restaurants and filtering based on user preferences. Designed a Flask-based backend for efficient testing and deployment, enabling seamless communication between the front-end interface and external APIs. As project leader, managed group timelines and created Gantt chart to mitigate development dependencies.</p>
+      <p><strong>Tech:</strong> Python, Flask, JavaScript, HTML, CSS</p>
+      <img src="images/munchmap.png" alt="MunchMap project" />
+      <a href="https://github.com/varshasing/MunchMap-Odyssey" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -271,11 +293,13 @@
   <div class="modal" id="modal13">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal13')">&times;</span>
-      <h2>WIP Modal 13</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Limited Dexterity Smart Desk Lamp</h2>
+      <p>The goal of this desk lamp is to provide users with mobility constraints an accessible, functional lamp that provides a full spectrum of visible lighting. The lamp requires no applied force. The device utiliizes an RTC module, 10W RGB, and a dual proximity and ambient light sensor. An Arduino UNO microcontroller drives the logic for our smart lamp. We housed our hardware in a 3D printed cylinder with an attached gooseneck, a laser-printed support, and a lampshade. Ultimately, we created a working prototype and reduced manufacturing costs by over <strong>~50%</strong>.</p>
+      <p><strong>Tech:</strong> Embedded Systems, Microcontroller Programming, SolidWorks, Circuit Design, Engineering Design</p>
+      <img src="images/lamp-210.jpg" alt="Lamp project" />
+      <a href="https://github.com/varshasing/EK210" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
@@ -283,11 +307,11 @@
   <div class="modal" id="modal14">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal14')">&times;</span>
-      <h2>WIP modal 14</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>5-Stage Pipelined CPU</h2>
+      <p>Incremental project demonstrating a 5-staged pipelined CPU, including fowarding and a Hazard Detection Unit. This project was done in behavioral Verilog, with various test cases verifying the implementation. By adding these two units, I increased efficiency of the CPU by overwriting stale data and adding stalls only when necessary.</p>
+      <p><strong>Tech:</strong> Verilog </p>
+      <img src="images/forwarding-413.png" alt="pipelinedCPU project" />
+      <!--<a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a> -->
     </div>
   </div>
 
@@ -295,11 +319,13 @@
   <div class="modal" id="modal15">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal15')">&times;</span>
-      <h2>WIP Modal 15</h2>
-      <p>Benchmarked serial Ray Tracing from Ray Tracing in One Weekend, analyzed, and introduced optimizations for both CPU and GPU versions of the code.</p>
-      <p><strong>Tech:</strong> C++, CUDA, OpenMP, Git</p>
-      <img src="images/ray-tracing.png" alt="Ray Tracing project" />
-      <a href="https://github.com/EC527JilinZhengVarshaSingh/super-raytrace" target="_blank">View on GitHub</a>
+      <h2>Reinforcement Learning-based Blackjack Agent</h2>
+      <p>Tasked to build a Blackjack agent with reinforcement learning to achieve as close to published win rates as possible. I built a testing environment for my Blackjack agent in Python, created a state for the model to learn from (knowing the value of cards it and the dealer drew, as well as the number of hard and soft aces in each hand). Implementing a Q-learning algorithm, I was able to observe win rate over ten-thousand simulations of Blackjack, fine-tune the reward structure, and analyze performance metrics. With this, I achieved a <strong>~42.1%</strong> win rate, right on-par with published papers.</p>
+      <p><strong>Tech:</strong> Python, Reinforcement Learning, Jupyter Notebook, CoLab </p>
+      <img src="images/rl-blackjack.png" alt="Blackjack project" />
+      <a href="https://github.com/varshasing/rl-blackjack-agent" class="github-link">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </div>
 
