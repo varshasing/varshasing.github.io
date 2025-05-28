@@ -52,16 +52,13 @@ footer {
   width: auto;
   height: auto;
   margin: auto;
-  object-fit: contain;;
+  object-fit: contain;
   display: block;
 }
 .card-desc {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100px;
   text-align: center;
-  padding: 0 12px;
+  margin-top: 10px;
 }
 
 .modal {
