@@ -58,6 +58,7 @@ footer {
 }
 .card-desc {
   height: 140px;
+  position: bottom;
   align-items: center;
   justify-content: center;
   text-align: center;
