@@ -58,11 +58,11 @@ footer {
 }
 .card-desc {
   height: 140px;
-  position: bottom;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  paddding 0 8px;
 }
 
 .modal {
