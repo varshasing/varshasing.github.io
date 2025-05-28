@@ -14,7 +14,7 @@ footer {
   text-align: center;
   margin-bottom: 40px;
 }
-.profile-pic {
+.profile {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -22,7 +22,6 @@ footer {
   margin-bottom: 16px;
 }
 
-/* About Section */
 .about {
   max-width: 700px;
   margin: 0 auto 60px;
@@ -34,7 +33,6 @@ footer {
   margin-bottom: 16px;
 }
 
-/* Timeline Section */
 .timeline {
   max-width: 800px;
   margin: 0 auto 60px;
