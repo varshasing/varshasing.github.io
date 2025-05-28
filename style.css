@@ -5,7 +5,7 @@ body {
   color: #333;
 }
 
-header, footer {
+footer {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -14,8 +14,7 @@ header, footer {
   text-align: center;
   margin-bottom: 40px;
 }
-
-.profile {
+.profile-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -23,47 +22,43 @@ header, footer {
   margin-bottom: 16px;
 }
 
+/* About Section */
 .about {
   max-width: 700px;
   margin: 0 auto 60px;
   padding: 0 20px;
   text-align: center;
 }
-
 .about h2 {
   font-size: 28px;
   margin-bottom: 16px;
 }
 
+/* Timeline Section */
 .timeline {
   max-width: 800px;
   margin: 0 auto 60px;
   padding: 0 20px;
 }
-
 .timeline h2 {
   font-size: 28px;
   margin-bottom: 24px;
   text-align: center;
 }
-
 .timeline-list {
   list-style: none;
   padding-left: 0;
   border-left: 2px solid #ccc;
 }
-
-.timeline-item {
+.timeline-list li {
   margin-bottom: 20px;
   padding-left: 20px;
   position: relative;
 }
-
 .timeline-date {
   font-weight: bold;
   color: #555;
 }
-
 .timeline-list li::before {
   content: "";
   position: absolute;
@@ -72,7 +67,7 @@ header, footer {
   width: 12px;
   height: 12px;
   background: #007BFF;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 footer {
