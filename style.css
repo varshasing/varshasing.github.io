@@ -97,7 +97,7 @@ footer {
 
 .timeline-dot {
   position: absolute;
-  top: 40px;
+  top: 12px;
   width: 12px;
   height: 12px;
   background: #007BFF;
@@ -121,6 +121,18 @@ footer {
     width: 100%;
     text-align: left;
     padding-left: 60px;
+    .timeline-dot {
+      left: 14px;
+      right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: 14px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      left: 14px;
+    }
   }
 
   .timeline::before {
