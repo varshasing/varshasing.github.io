@@ -27,53 +27,52 @@
    </section>
 
   <!-- Work Timeline -->
-   <section class="timeline">
+  <section id="timeline" class="timeline-section">
     <h2>Work Experience</h2>
-    <ul class="timeline-list">
-      <li>
-        <span class="timeline-date">June 2025 - August 2025</span>
-        <div class=""timeline-content">
-          <strong>SWE Technology Intern</strong> - Broadridge Financial Solutions<br>
-          TBA
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">January 2025 - May 2025</span>
-        <div class="timeline-Content">
-          <strong>Teaching Assistant</strong> - Computer Organization<br>
-          Debugging and verifying Verilog labs for 50+ students, ranging from carry-select FA to pipelined CPUs with hazards and forwarding. Held office hours teaching topics such as CPU design, memory systems, assembly language, and logic design.
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">January 2025 - May 2025</span>
-        <div class="timeline-content">
-          <strong>Teaching Assistant</strong> - Machine Learning<br>
-          Designed homework assignments for 80+ students, comprising of a written portion testing mathematical understanding for concepts underlying machine learning, as well as a coding section that tests implementation in Python. Held office hours for topics such as SVM, backpropagation, decision trees, and basic deep learning architectures.
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">August 2025 - December 2025</span>
-        <div class="timeline-content">
-          <strong>Teaching Assistant</strong> - Applied Algorithms and Data Structures<br>
-          Developed auto-grader and comprehensive solutions for C++ programming questions to optimize grading and consistency for 60+ students. Held office hours, teaching fundamental topics in runtime analysis, as well as data structure and algorithm efficiency.
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">Feburary 2024 - Present</span>
-        <div class="timeline-content">
-          <strong>Research Assistant</strong> - Sharifzadeh Lab<br>
-          Funded by UROP, primarily worked on developing a workflow for an ongoing project for the lab which focuses on characterizing electron transport in supremolecular structures. I furthered the project's scope by extending the workflow to automate distortion and validation of Cryo-EM extracted models.
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">August 2023 - May 2024</span>
-        <div class="timeline-content">
-          <strong>Head Teaching Assistant</strong> - Introduction to Programming/Programming for Engineers<br>
-          Maintained Blackboard course site for 500+ students and instructors, initialized Gradescope course page for project grading. Conducted weekly discussions for 40+ students, held weekly office hours, grading quizzes and exams. Attended lectures and labs, assisting students with Python and MATLAB concepts and coding etiquette.
-        </div>
-      </li>
-    </ul>
-   </section>
+    <div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">June 2025 - August 2025</div>
+    <div class="timeline-card" onclick="openModal('broadridge')">
+      <h3>SWE Technology Intern - Broadridge Financial Solutions</h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">January 2025 - May 2025</div>
+    <div class="timeline-card" onclick="openModal('machine-learning')">
+      <h3>Teaching Assistant</strong> - Machine Learning</h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">January 2025 - May 2025</div>
+    <div class="timeline-card" onclick="openModal('computer-organization')">
+      <h3>Teaching Assistant</strong> - Computer Organization</h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">August 2024 - December 2024</div>
+    <div class="timeline-card" onclick="openModal('algorithms')">
+      <h3>Teaching Assistant</strong> - Algorithms and Data Structures</h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Feburary 2024 - Present</div>
+    <div class="timeline-card" onclick="openModal('sharifzadeh')">
+      <h3>Research Assistant</strong> - Sharifzadeh Lab</h3>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">August 2023 - May 2024</div>
+    <div class="timeline-card" onclick="openModal('intro-to-programming')">
+      <h3>Teaching Assistant</strong> - Intro to Programming/Programming for Engineers</h3>
+    </div>
+  </div>
+</div>
+</section>
 
   <section class="card-grid">
 
@@ -384,10 +383,65 @@
       <h2>Reinforcement Learning-based Blackjack Agent</h2>
       <p>Tasked to build a Blackjack agent with reinforcement learning to achieve as close to published win rates as possible. I built a testing environment for my Blackjack agent in Python, created a state for the model to learn from (knowing the value of cards it and the dealer drew, as well as the number of hard and soft aces in each hand). Implementing a Q-learning algorithm, I was able to observe win rate over ten-thousand simulations of Blackjack, fine-tune the reward structure, and analyze performance metrics. With this, I achieved a <strong>~42.1%</strong> win rate, right on-par with published papers.</p>
       <p><strong>Tech:</strong> Python, Reinforcement Learning, Jupyter Notebook, CoLab </p>
-      <img src="images/rl-blackjack.png" alt="Blackjack project" />
+      <img src="images/rl-blackjack.png" alt="Blackjack project"/>
       <a href="https://github.com/varshasing/rl-blackjack-agent" class="github-link">
         <i class="fab fa-github"></i>
       </a>
+    </div>
+  </div>
+
+  <!-- Timeline-->
+  <div class="modal" id="broadridge">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('broadridge')">&times;</span>
+      <h2>SWE Technology Intern - Broadridge</h2>
+      <p>TBA</p>
+      <img src="images/broadridge-logo.png" alt="Broadridge"/>
+    </div>
+  </div>
+
+  <div class="modal" id="computer-organization">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('computer-organization')">&times;</span>
+      <h2>Teaching Assistant - Computer Organization</h2>
+      <p>Debugging and verifying Verilog labs for 50+ students, ranging from carry-select FA to pipelined CPUs with hazards and forwarding. Held office hours teaching topics such as CPU design, memory systems, assembly language, and logic design.</p>
+      <img src="images/bu-ece.jpeg" alt="BUECE"/>
+    </div>
+  </div>
+
+  <div class="modal" id="machine-learning">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('machine-learning')">&times;</span>
+      <h2>Teaching Assistant - Machine Learning</h2>
+      <p>Designed homework assignments for 80+ students, comprising of a written portion testing mathematical understanding for concepts underlying machine learning, as well as a coding section that tests implementation in Python. Held office hours for topics such as SVM, backpropagation, decision trees, and basic deep learning architectures.</p>
+      <img src="images/bu-ece.jpeg" alt="BUECE"/>
+    </div>
+  </div>
+
+  <div class="modal" id="algorithms">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('algorithms')">&times;</span>
+      <h2>Teaching Assistant - Applied Algorithms and Data Structures</h2>
+      <p>Developed auto-grader and comprehensive solutions for C++ programming questions to optimize grading and consistency for 60+ students. Held office hours, teaching fundamental topics in runtime analysis, as well as data structure and algorithm efficiency.</p>
+      <img src="images/bu-ece.jpeg" alt="BUECE"/>
+    </div>
+  </div>
+
+  <div class="modal" id="sharifzadeh">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('sharifzadeh')">&times;</span>
+      <h2>Research Assistant - Sharifzadeh Lab</h2>
+      <p>Funded by UROP, primarily worked on developing a workflow for an ongoing project for the lab which focuses on characterizing electron transport in supremolecular structures. I furthered the project's scope by extending the workflow to automate distortion and validation of Cryo-EM extracted models.</p>
+      <img src="images/bu-ece.jpeg" alt="BUECE"/>
+    </div>
+  </div>
+
+  <div class="modal" id="intro-to-programming">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('intro-to-programming')">&times;</span>
+      <h2>Head Teaching Assistant - Introduction to Programming/Programming for Engineers</h2>
+      <p>Maintained Blackboard course site for 500+ students and instructors, initialized Gradescope course page for project grading. Conducted weekly discussions for 40+ students, held weekly office hours, grading quizzes and exams. Attended lectures and labs, assisting students with Python and MATLAB concepts and coding etiquette.</p>
+      <img src="images/bu-ece.jpeg" alt="BUECE"/>
     </div>
   </div>
 
