@@ -97,14 +97,19 @@ footer {
 
 .timeline-dot {
   position: absolute;
-  top: 32px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 40px;
   width: 12px;
   height: 12px;
   background: #007BFF;
   border-radius: 50%;
   z-index: 3;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -6px;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -6px;
 }
 
 /* Responsive fixes */
