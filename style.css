@@ -46,7 +46,7 @@ footer {
 }
 
 .timeline::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   top: 0;
@@ -95,9 +95,10 @@ footer {
   z-index: 1;
 }
 
-.timeline-dot {
+.timeline-item::before {
+  content: '';
   position: absolute;
-  top: 28px; /* vertically aligns with card text */
+  top: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: 12px;
