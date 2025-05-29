@@ -95,11 +95,24 @@ footer {
   z-index: 1;
 }
 
-.timeline-item::before {
+.timeline-item::before:nth-child(odd) {
   content: '';
   position: absolute;
   top: 24px;
   left: 0%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #007BFF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item::before:nth-child(even) {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: -50%;
   transform: translateX(-50%);
   width: 12px;
   height: 12px;
