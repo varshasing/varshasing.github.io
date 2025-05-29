@@ -33,20 +33,6 @@ footer {
   margin-bottom: 16px;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 40px;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #ccc;
-}
-
 .timeline-item {
   position: relative;
   margin: 20px 0;
@@ -56,12 +42,9 @@ footer {
 
 .timeline-date {
   position: absolute;
-  left: 70px;
+  left: -100px;
   top: 0;
   font-weight: bold;
-  color: #555;
-  width: 60px;
-  text-align: right;
 }
 
 .timeline-card {
