@@ -33,18 +33,27 @@ footer {
   margin-bottom: 16px;
 }
 
-.timeline-item {
-  position: relative;
-  margin: 20px 0;
-  padding-left: 40px;
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   border-left: 2px solid #ccc;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;;
+  align-items: flex-start;
+  gap: 20px;
+  display: flex;
 }
 
 .timeline-date {
-  position: absolute;
-  left: -100px;
-  top: 0;
+  min-width: 80px;
+  color: #555;
   font-weight: bold;
+  text-align: right;
 }
 
 .timeline-card {
@@ -53,11 +62,19 @@ footer {
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  flex: 1;
 }
 
-.timeline-card:hover {
-  transform: scale(1.02);
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: #007BFF;
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 footer {
