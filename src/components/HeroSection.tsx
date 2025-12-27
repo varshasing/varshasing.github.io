@@ -17,17 +17,17 @@ export const HeroSection = () => {
               Hello, World! I'm
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading mb-4">
-              <span className="gradient-text">Your Name</span>
+              <span className="gradient-text">Varsha Singh</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl text-muted-foreground font-heading mb-6">
-              Computer Engineering Student
+              Computer Engineer
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-              I'm a passionate computer engineering student specializing in 
+              I'm studying at Boston University, specializing in 
               <span className="text-primary"> embedded systems</span>, 
               <span className="text-primary"> robotics</span>, and 
-              <span className="text-primary"> full-stack development</span>. 
-              I love building things that live at the intersection of hardware and software.
+              <span className="text-primary"> cloud computing / modern software development</span>. 
+              I love building things at the intersection of hardware and software, and will help a billion people with my work!
             </p>
 
             {/* CTA Buttons */}
@@ -42,15 +42,23 @@ export const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex gap-4">
+              <a href="https://github.com/varshasingh" target="_blank" rel="noopener noreferrer">
               <Button variant="glass" size="icon" className="hover:glow-box">
                 <Github className="h-5 w-5" />
               </Button>
+              </a>
+
+              <a href="https://linkedin.com/in/var-singh" target="_blank" rel="noopener noreferrer">
               <Button variant="glass" size="icon" className="hover:glow-box">
                 <Linkedin className="h-5 w-5" />
               </Button>
+              </a>
+
+              <a href="mailto:varshasinghtx@gmail.com">
               <Button variant="glass" size="icon" className="hover:glow-box">
                 <Mail className="h-5 w-5" />
               </Button>
+              </a>
             </div>
           </div>
 
@@ -58,14 +66,11 @@ export const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-primary/30 glow-box animate-glow-pulse">
-                <div className="w-full h-full bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                      <span className="text-4xl font-heading gradient-text">YN</span>
-                    </div>
-                    <p className="text-muted-foreground text-sm">Your Photo Here</p>
-                  </div>
-                </div>
+                <img 
+                  src="/profilephoto.jpg" 
+                  alt="Varsha Singh" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 border-2 border-primary/30 rounded-lg" />
