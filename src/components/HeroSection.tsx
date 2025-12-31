@@ -42,7 +42,7 @@ export const HeroSection = () => {
 
             {/* Social Links */}
             <div className="flex gap-4">
-              <a href="https://github.com/varshasingh" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/varshasing" target="_blank" rel="noopener noreferrer">
               <Button variant="glass" size="icon" className="hover:glow-box">
                 <Github className="h-5 w-5" />
               </Button>
