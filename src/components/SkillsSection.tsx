@@ -17,7 +17,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: 'Frameworks',
     icon: <Globe className="h-6 w-6" />,
-    skills: ['React', 'Node.js', 'Vue.js', 'Flask', 'FastAPI'],
+    skills: ['React', 'Node.js', 'Vue.js', 'Flask', 'Tailwind', 'FastAPI'],
     color: 'from-orange-400 to-amber-600',
   },
   {
