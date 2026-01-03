@@ -6,12 +6,12 @@ interface Project {
   id: string;
   title: string;
   shortDescription: string;
-  fullDescription: string;
+  fullDescription: string[];
   technologies: string[];
   tags: string[];
   githubUrl?: string;
   liveUrl?: string;
-  image?: string;
+  image: string;
 }
 
 const projects: Project[] = [
@@ -19,57 +19,93 @@ const projects: Project[] = [
     id: '1',
     title: 'Autonomous Drone Navigation',
     shortDescription: 'ROS2-based autonomous navigation system for quadcopter drones with obstacle avoidance.',
-    fullDescription: 'Built a complete autonomous navigation stack for quadcopter drones using ROS2 and PX4. Implemented SLAM using ORB-SLAM3, path planning with A*, and obstacle avoidance using depth cameras. The system achieves real-time localization at 30Hz and can navigate complex indoor environments.',
+    fullDescription: [
+      'Built a complete autonomous navigation stack for quadcopter drones using ROS2 and PX4.',
+      'Implemented SLAM using ORB-SLAM3 for real-time localization at 30Hz.',
+      'Developed path planning algorithms with A* and obstacle avoidance using depth cameras.',
+      'Successfully navigates complex indoor environments autonomously.',
+    ],
     technologies: ['C++', 'ROS2', 'Python', 'OpenCV'],
     tags: ['Robotics', 'Embedded', 'C++'],
     githubUrl: '#',
+    image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&h=400&fit=crop',
   },
   {
     id: '2',
     title: 'Smart Home IoT Platform',
     shortDescription: 'Full-stack IoT platform with custom ESP32 sensors and React dashboard.',
-    fullDescription: 'Designed and built a complete smart home ecosystem with custom PCB sensor nodes, ESP32 firmware, MQTT broker, and a real-time React dashboard. Supports temperature, humidity, motion, and air quality monitoring with automated alerts and historical data visualization.',
+    fullDescription: [
+      'Designed and built a complete smart home ecosystem with custom PCB sensor nodes.',
+      'Developed ESP32 firmware and MQTT broker for real-time communication.',
+      'Created a React dashboard for monitoring temperature, humidity, motion, and air quality.',
+      'Implemented automated alerts and historical data visualization.',
+    ],
     technologies: ['React', 'Node.js', 'ESP32', 'MQTT', 'PostgreSQL'],
     tags: ['Full-Stack', 'Embedded', 'Hardware'],
     githubUrl: '#',
     liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
   },
   {
     id: '3',
     title: 'FPGA Neural Network Accelerator',
     shortDescription: 'Custom hardware accelerator for CNN inference on Xilinx FPGA.',
-    fullDescription: 'Designed a custom neural network accelerator in Verilog targeting Xilinx Artix-7 FPGA. Implemented systolic array architecture for matrix multiplication, achieving 2.5 TOPS for INT8 inference. Integrated with Python for model conversion and testing.',
+    fullDescription: [
+      'Designed a custom neural network accelerator in Verilog targeting Xilinx Artix-7 FPGA.',
+      'Implemented systolic array architecture for matrix multiplication.',
+      'Achieved 2.5 TOPS for INT8 inference performance.',
+      'Integrated with Python for model conversion and testing pipelines.',
+    ],
     technologies: ['Verilog', 'Python', 'Vivado', 'PyTorch'],
     tags: ['Hardware', 'Embedded', 'Python'],
     githubUrl: '#',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
   },
   {
     id: '4',
     title: 'Real-time Collaborative Editor',
     shortDescription: 'Google Docs-like collaborative text editor with operational transform.',
-    fullDescription: 'Built a real-time collaborative text editor supporting multiple simultaneous users with conflict resolution using operational transformation. Features include rich text formatting, cursor presence, and automatic saving. Handles 100+ concurrent connections with sub-100ms latency.',
+    fullDescription: [
+      'Built a real-time collaborative text editor supporting multiple simultaneous users.',
+      'Implemented conflict resolution using operational transformation algorithms.',
+      'Features rich text formatting, cursor presence, and automatic saving.',
+      'Handles 100+ concurrent connections with sub-100ms latency.',
+    ],
     technologies: ['TypeScript', 'React', 'Node.js', 'WebSocket', 'Redis'],
     tags: ['Full-Stack', 'TypeScript'],
     githubUrl: '#',
     liveUrl: '#',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
   },
   {
     id: '5',
     title: 'Line Following Robot',
     shortDescription: 'Competition-winning line follower with PID control and adaptive speed.',
-    fullDescription: 'Designed and built a high-speed line following robot for university competition. Features custom PCB with STM32 MCU, array of IR sensors, and brushless DC motors. Implemented adaptive PID control and achieved top 3 placement in regional competition.',
+    fullDescription: [
+      'Designed and built a high-speed line following robot for university competition.',
+      'Features custom PCB with STM32 MCU, IR sensor array, and brushless DC motors.',
+      'Implemented adaptive PID control for optimal path following.',
+      'Achieved top 3 placement in regional robotics competition.',
+    ],
     technologies: ['C', 'STM32', 'KiCad', 'MATLAB'],
     tags: ['Robotics', 'Embedded', 'Hardware', 'C++'],
     githubUrl: '#',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop',
   },
   {
     id: '6',
     title: 'Compiler for Subset of C',
     shortDescription: 'LLVM-based compiler for a C-like language with optimizations.',
-    fullDescription: 'Implemented a compiler for a subset of C targeting x86-64 via LLVM. Features lexer, recursive descent parser, semantic analysis, and code generation. Supports functions, structs, pointers, and basic optimizations like constant folding and dead code elimination.',
+    fullDescription: [
+      'Implemented a compiler for a subset of C targeting x86-64 via LLVM.',
+      'Built lexer, recursive descent parser, and semantic analysis phases.',
+      'Supports functions, structs, pointers, and complex expressions.',
+      'Implemented optimizations including constant folding and dead code elimination.',
+    ],
     technologies: ['C++', 'LLVM', 'Python'],
     tags: ['C++', 'Systems'],
     githubUrl: '#',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
   },
 ];
 
@@ -80,20 +116,26 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="glass-card p-6 hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
-      <div className="flex items-start justify-between mb-4">
-        <div className="p-2 rounded-lg bg-primary/10">
-          <Folder className="h-6 w-6 text-primary" />
-        </div>
-        <div className="flex gap-2">
+    <div className="glass-card overflow-hidden hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
+      {/* Featured Image */}
+      <div className="relative w-full h-48 overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        
+        {/* Links overlay */}
+        <div className="absolute top-3 right-3 flex gap-2">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="p-2 rounded-lg bg-background/80 backdrop-blur-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-4 w-4" />
             </a>
           )}
           {project.liveUrl && (
@@ -101,48 +143,63 @@ const ProjectCard = ({ project }: { project: Project }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="p-2 rounded-lg bg-background/80 backdrop-blur-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              <ExternalLink className="h-5 w-5" />
+              <ExternalLink className="h-4 w-4" />
             </a>
           )}
         </div>
       </div>
 
-      <h3 className="text-lg font-heading font-semibold mb-2">{project.title}</h3>
-      
-      <p className="text-muted-foreground text-sm mb-4 flex-1">
-        {isExpanded ? project.fullDescription : project.shortDescription}
-      </p>
+      {/* Content */}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-lg font-heading font-semibold mb-2">{project.title}</h3>
+        
+        <p className="text-muted-foreground text-sm mb-4">
+          {project.shortDescription}
+        </p>
 
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="text-muted-foreground hover:text-primary -ml-3 mb-4 self-start"
-      >
-        {isExpanded ? (
-          <>
-            <ChevronUp className="h-4 w-4 mr-1" />
-            Less
-          </>
-        ) : (
-          <>
-            <ChevronDown className="h-4 w-4 mr-1" />
-            More
-          </>
+        {/* Expanded bullet points */}
+        {isExpanded && (
+          <ul className="space-y-2 mb-4 animate-fade-in">
+            {project.fullDescription.map((point, index) => (
+              <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                <span className="text-primary mt-1.5 text-xs">▹</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         )}
-      </Button>
 
-      <div className="flex flex-wrap gap-2 mt-auto">
-        {project.technologies.map((tech) => (
-          <span
-            key={tech}
-            className="text-xs font-heading text-muted-foreground"
-          >
-            {tech}
-          </span>
-        ))}
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="text-muted-foreground hover:text-primary -ml-3 mb-4 self-start"
+        >
+          {isExpanded ? (
+            <>
+              <ChevronUp className="h-4 w-4 mr-1" />
+              Less
+            </>
+          ) : (
+            <>
+              <ChevronDown className="h-4 w-4 mr-1" />
+              More
+            </>
+          )}
+        </Button>
+
+        <div className="flex flex-wrap gap-2 mt-auto">
+          {project.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs font-heading text-muted-foreground"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
