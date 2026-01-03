@@ -8,7 +8,7 @@ export const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="#"
+              href="https://github.com/varshasing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -16,7 +16,7 @@ export const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/in/var-singh"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -24,7 +24,7 @@ export const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:varshasinghtx@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />
@@ -34,7 +34,7 @@ export const Footer = () => {
           {/* Attribution */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
             Built with <Heart className="h-4 w-4 text-primary" /> by{' '}
-            <span className="gradient-text font-medium">Your Name</span>
+            <span className="gradient-text font-medium">Varsha Singh</span>
           </p>
 
           {/* Copyright */}

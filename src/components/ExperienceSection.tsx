@@ -18,6 +18,20 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: '1',
+    company: 'Digits',
+    logo: '/digits-logo.png',
+    role: 'Incoming Engineering Intern',
+    team: 'TBD/TBA',
+    period: 'May 2025 - Aug 2025',
+    location: 'Boston, MA',
+    shortDescription: 'Incoming Engineering Intern at Digits, a startup revolutionizing financial data management as the first AI-native accounting platform.',
+    fullDescription: [
+      'Details to be added upon completion of internship.',
+    ],
+    technologies: ['TBD' ],
+  },
+  {
+    id: '2',
     company: 'BU Department of Electrical & Computer Engineering',
     logo: '/bu-ece-logo.jpeg',
     role: 'Teaching Assistant',
@@ -34,7 +48,7 @@ const experiences: Experience[] = [
     technologies: ['QEMU', 'ARM', 'PyTorch', 'CUDA', 'Python', 'Bash'],
   },
   {
-    id: '2',
+    id: '3',
     company: 'Broadridge Financial Solutions',
     role: 'Global Technology Intern',
     team: 'Developer Experience',
@@ -50,7 +64,7 @@ const experiences: Experience[] = [
     technologies: ['GitLab', 'Jenkins', 'CI/CD', 'AWS (EC2)', 'Python', 'Jira', 'Agile'],
   },
   {
-    id: '3',
+    id: '4',
     company: 'Boston University',
     role: 'Undergraduate Research Assistant',
     team: 'The Sharifzadeh Group (BU ECE)',
@@ -171,7 +185,7 @@ export const ExperienceSection = () => {
             Where I've <span className="gradient-text">Worked</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Insight into my professional journey.
+            A timeline of my professional journey.
           </p>
         </div>
 
