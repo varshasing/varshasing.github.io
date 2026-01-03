@@ -18,14 +18,14 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: '1',
-    company: 'Boston University Department of Electrical & Computer Engineering',
+    company: 'BU Department of Electrical & Computer Engineering',
+    logo: '/bu-ece-logo.jpeg',
     role: 'Teaching Assistant',
-    team: 'ENG EC535; ENG EC523; ENG EC444; ENG EC414 (2x); ENG EC413; ENG EC330 (2x); ENG EK122 (2x); ENG EK121 (2x)',
-    period: 'Aug 2025 - Dec 2025',
+    period: 'Aug 2023 - Present',
     location: 'Boston, MA',
-    shortDescription: 'Mentored 800+ students through 12 core engineering course offerings in C, C++, Verilog, Assembly, Python, and MATLAB.',
+    shortDescription: 'Mentored 1000+ students through 12 engineering course offerings in C, C++, Verilog, Assembly, Python, and MATLAB. (Courses listed below)',
     fullDescription: [
-      'Courses: Embedded Systems, Deep Learning, Smart and Connected Systems, Machine Learning, Computer Organization, Applied Algorithms and Data Structures, Programming for Engineers, Introduction to Programming.',
+      'Courses: ENG EC535: Embedded Systems, ENG EC523: Deep Learning, ENG EC444: Smart and Connected Systems, ENG EC414 (x2): Machine Learning, ENG EC413: Computer Organization, ENG EC330 (2x): Applied Algorithms and Data Structures, ENG EK122 (2x): Programming for Engineers, ENG EK121 (2x): Introduction to Programming.',
       'Led weekly discussions and lab sessions, clarifying complex concepts in embedded systems, computer architecture, and digital logic design.',
       'Automated grading tools in Bash / Python, cutting grading time by ~65% and ensuring consistency across graders.',
       'Conducted code reviews and delivered feedback to students on debugging, refactoring, and test-driven development.',
@@ -35,35 +35,37 @@ const experiences: Experience[] = [
   },
   {
     id: '2',
-    company: 'Robotics Startup',
-    role: 'Embedded Systems Intern',
-    team: 'Firmware Team',
-    period: 'Jan 2024 - May 2024',
+    company: 'Broadridge Financial Solutions',
+    role: 'Global Technology Intern',
+    team: 'Developer Experience',
+    logo: '/broadridge-logo.webp',
+    period: 'Jun 2025 - Aug 2025',
     location: 'Boston, MA',
-    shortDescription: 'Developed firmware for autonomous mobile robots with real-time sensor processing.',
+    shortDescription: 'Initiated Perforce to GitLab migration for 1200+ applications; Authored DevOps playbooks and tutorials; Led a team of 9 interns in AI Compliance capstone project.',
     fullDescription: [
-      'Wrote C++ firmware for ARM Cortex-M4 microcontrollers controlling robot locomotion',
-      'Implemented sensor fusion algorithms combining IMU, LIDAR, and wheel encoders for localization',
-      'Designed and tested custom PCB for motor driver interface with KiCad',
-      'Reduced sensor processing latency by 30% through RTOS task optimization',
+      'Drove Perforce to GitLab migration for 1200+ applications with detailed planning, metrics tracking, and coordination with central DevOps team to manage large-scal organizational process, presented strategy to VP/CTO-level stakeholders.',
+      'Authored comprehensive DevOps playbooks and tutorials covering how to build Jenkins CI pipelines with automated builds and email notifications, and how to provision a Jenkins agent on AWS EC2 for the DevEx team. Reduced on-boarding time, standardized compliance checks, and established base for CI/CD rollout.',
+      'Delivered capstone project for the AI Compliance team: AI-driven compliance dashboard with document upload, task assignment, and team collaboration features. Built a PII redaction module in Python for policy development, enabling data-compliant use of LLMs in regulated workflows. Led a team of 9 interns using Agile methodologies, conducting daily stand-ups, sprint planning, and retrospectives to ensure alignment with customer and high-quality output.',
     ],
-    technologies: ['C++', 'FreeRTOS', 'ARM', 'ROS2', 'KiCad'],
+    technologies: ['GitLab', 'Jenkins', 'CI/CD', 'AWS (EC2)', 'Python', 'Jira', 'Agile'],
   },
   {
     id: '3',
-    company: 'University Research Lab',
-    role: 'Undergraduate Researcher',
-    team: 'Computer Vision Lab',
-    period: 'Sep 2023 - Dec 2023',
-    location: 'University Campus',
-    shortDescription: 'Researched deep learning approaches for real-time object detection on edge devices.',
+    company: 'Boston University',
+    role: 'Undergraduate Research Assistant',
+    team: 'The Sharifzadeh Group (BU ECE)',
+    logo: '/bu-ece-logo.jpeg',
+    period: 'Feb 2024 - Dec 2025',
+    location: 'Boston, MA',
+    shortDescription: 'Advanced research on protein nanowire electron transport by architecting automated workflows for data analysis and simulation. Funded through UROP Fellowship and the Clare Boothe Luce Foundation.',
     fullDescription: [
-      'Implemented and optimized YOLOv8 models for deployment on NVIDIA Jetson Nano',
-      'Achieved 45 FPS inference speed while maintaining 92% mAP on custom dataset',
-      'Published findings in workshop paper at regional AI conference',
-      'Mentored 2 junior students on machine learning fundamentals and PyTorch',
+      'Architected automated computational workflows using Python and Bash to integrate multi-step simulation tools with JSON-based data pipelines. Reduced manual setup time by 8x, enabling high-throughput analysis of electron transport in protein nanowires.',
+      'Deployed and monitored large-scale simulations on high-performance computing cluster (SunGrid Engine) writing batch job scripts, error handling routines, and data convergence scripts. Ensured reproducible testing environment with Conda and Git.',
+      'Extended existing research scope by automating distortions along the Raman spectra of protein nanowires, enabling comprehensive analysis of structural variations on electron transport properties.',
+      'Conducted code reviews, debugging, and refactoring simulation code for accuracy and precision.',
+      'Presented findings at BU Undergraduate Research Symposium and co-authoring a paper for publication.',
     ],
-    technologies: ['Python', 'PyTorch', 'OpenCV', 'CUDA', 'TensorRT'],
+    technologies: ['Python', 'MatPlotLib', 'Bash', 'Git', 'Conda'],
   },
 ];
 
@@ -80,10 +82,13 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
 
       <div className="glass-card p-6 hover:border-primary/30 transition-all duration-300">
         <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-          {/* Company Logo Placeholder */}
-          <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+          {experience.logo ? (
+            <img src={experience.logo} alt={experience.company} className="w-12 h-12 rounded-lg object-cover" />
+            ) : (
+            <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
             <Building2 className="h-6 w-6 text-primary" />
-          </div>
+        </div>
+          )}
 
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
@@ -166,7 +171,7 @@ export const ExperienceSection = () => {
             Where I've <span className="gradient-text">Worked</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A timeline of my professional journey in tech.
+            Insight into my professional journey.
           </p>
         </div>
 
