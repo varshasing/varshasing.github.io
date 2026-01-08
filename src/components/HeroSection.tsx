@@ -23,17 +23,19 @@ export const HeroSection = () => {
               Computer Engineer
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-              I'm studying at Boston University, specializing in 
+              I'm a Senior at Boston University, specializing in 
               <span className="text-primary"> embedded systems</span>, 
               <span className="text-primary"> robotics</span>, and 
-              <span className="text-primary"> cloud computing / modern software development</span>. 
+              <span className="text-primary"> cloud computing</span> / <span className="text-primary"> modern software development</span>. 
               I love building things at the intersection of hardware and software, and will help a billion people with my work!
+              <br></br>
+              Currently seeking full-time opportunities for Fall 2025 and beyond. Feel free to reach out via <span className="text-primary">email</span> or <span className="text-primary">LinkedIn</span>!
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
               <Button variant="glow" size="lg" onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}>
-                View Projects
+                Projects
               </Button>
               <Button variant="outline" size="lg" onClick={() => document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' })}>
                 Experience

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -33,7 +33,7 @@ export const Footer = () => {
 
           {/* Attribution */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="h-4 w-4 text-primary" /> by{' '}
+            Built by{' '}
             <span className="gradient-text font-medium">Varsha Singh</span>
           </p>
 

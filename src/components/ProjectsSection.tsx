@@ -33,22 +33,6 @@ const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'StockApp',
-    shortDescription: 'Distributed stock analytics application with real-time processing using a microservices architecture in Java.',
-    fullDescription: [
-      'Redesigned monolithic stock application into distributed microservices in Java, enabling real-time processing of user-subscribed stock data from Finnhub API with improved scalability and system modularity.',
-      'Migrated internal event delivery pipelines to AWS SQS to support scalable and reliable data transfer and asynchronous communication between microservices.',
-      'Designed and developed a responsive React frontend using TypeScript, enabling users to access real-time stock calculations and interactive visualizations.',
-      'Deployed on AWS Lightsail and implemented unit/service testing (JUnit, ViTest) to create CI/CD pipelines with GitHub Actions.',
-      'Developed and optimized core REST APIs, added monitoring hooks and multiple backend persistences (file + SQLite) to ensure reliability across restarts and deployments.',
-    ],
-    technologies: ['Java', 'CI/CD', 'AWS SQS', 'AWS Lightsail', 'React', 'TypeScript', 'REST APIs', 'SQLite'],
-    tags: ['Full-Stack', 'Java'],
-    githubUrl: 'https://github.com/varshasing/StockApp',
-    image: '/stockapp-diagram.png',
-  },
-  {
-    id: '3',
     title: 'Cloud-Native Medical Imaging Pipeline',
     shortDescription: 'An automated cloud-native neuroimaging pipeline on Openshift and workflow translation tool (tektonx), improving reproducibility and interoperability.',
     fullDescription: [
@@ -64,7 +48,7 @@ const projects: Project[] = [
     image: '/dicom-denoised.png',
   },
   {
-    id: '4',
+    id: '3',
     title: 'LaunchPad (BostonHacks 2025 Main Track Winner)',
     shortDescription: 'AI-powered platform that instantly generates tailored, professional LaTeX resumes.',
     fullDescription: [
@@ -81,133 +65,7 @@ const projects: Project[] = [
     image: '/launchpad-home.png',
   },
   {
-    id: '5',
-    title: 'Jailbreaking Large Language Models',
-    shortDescription: 'Comparitive analysis of vulnerabilities in chatbots with PAIR. Developed a modular defense framework, delivering safe responses for 79% of jailbreaking prompts.',
-    fullDescription: [
-      'Implemented the PAIR (Prompt Automatic Iterative Refinement) framework, achieving highly efficient black-box "jailbreaking" of LLMs in under 20 queries.',
-      'Architected an adversarial multi-agent system where an "Attacker LLM" iteratively refines semantic prompts to bypass the safety guardrails of a "Target LLM," overseen by a "Judge LLM."',
-      'Developed a modular defense framework integrating prompt validation and real-time response filtering, successfully mitigating unsafe outputs for 79% of identified adversarial patterns.',
-      'Conducted a comparative vulnerability assessment using the AdvBench and JailbreakBench datasets to quantify the success rates and transferability of semantic attacks across open and closed-source models.',
-      'Containerized the experimentation environment using Docker and integrated Weights & Biases (WandB) for real-time telemetry and logging of adversarial iterative refinement cycles.'
-    ],
-    technologies: ['Python', 'Docker', 'WandB', 'API Integration'],
-    tags: ['Python', 'Cybersecurity'],
-    githubUrl: 'https://github.com/pzhao0/PAIR',
-    image: '/jailbreaking-llms.png',
-  },
-  {
-    id: '6',
-    title: 'Custom POSIX Shell Implementation in C',
-    shortDescription: 'A Bash Shell implemented in C supporting command execution, redirecting standard I/O to files, pipes, and background processes.',
-    fullDescription: [
-      'Developed robust Unix-like shell in C using the Read-Eval-Print Loop (REPL) paradigm to manage process lifecycles, synchronization, and system-level execution.',
-      'Implemented advanced process control using "fork-and-exec" mechanics, managing child process creation and utilizing "waitpid" to prevent the creation of zombie processes.',
-      'Developed a multi-stage execution pipeline supporting standard I/O redirection (>, <) and Unix pipes (|) by manipulating file descriptor tables via "dup2" and "pipe" system calls.',
-      'Architected a custom string-tokenization engine to parse complex user commands, handling variable arguments and escape characters while maintaining strict memory safety.',
-      'Integrated asynchronous signal handling (SIGCHLD) to manage background process execution and resource reclamation without interrupting the primary user interface.'
-    ],
-    technologies: ['C', 'Linux', 'GDB', 'Make'],
-    tags: ['C', 'Systems'],
-    githubUrl: 'https://github.com/varshasing/SimpleShell',
-    image: '/shell.png',
-  },
-  {
-    id: '7',
-    title: 'Custom POSIX Threads Library Implementation in C',
-    shortDescription: 'User-level POSIX threads API in C with preemptive scheduling, multithreading, inter-thread communication, and thread-local-storage with COW (copy-on-write).',
-    fullDescription: [
-      'Developed a comprehensive user-level threading library in C, featuring a Round Robin preemptive scheduler and context switching for high-performance concurrency.',
-      'Architected a paged memory management unit (MMU) from scratch, implementing custom page fault handlers and a Copy-on-Write (CoW) optimization for efficient resource sharing.',
-      'Engineered robust synchronization primitives (semaphores), utilizing atomic operations to ensure thread safety and prevent race conditions in multi-threaded execution.',
-      'Implemented Thread-Local Storage (TLS) and custom stack allocation logic, managing memory boundaries to prevent stack overflows and ensure process-level isolation.',
-      'Automated a rigorous verification suite using Bash and Make, conducting stress tests for memory integrity and deadlock detection to validate system reliability under high concurrency.'
-    ],
-    technologies: ['C', 'Make', 'Linux', 'GDB', 'Bash', 'Operating Systems'],
-    tags: ['C', 'Systems'],
-    githubUrl: 'https://github.com/stars/varshasing/lists/operating-systems',
-    image: '/tls-os.png',
-  },
-  {
-    id: '8',
-    title: 'Custom File System Implementation in C',
-    shortDescription: 'Implemented a simplified file system in C using a Windows-style File Allocation Table architecture. Supports core file operations and simulates a virtual disk environment for testing.',
-    fullDescription: [
-      'Engineered a custom File Allocation Table (FAT) file system on a 32 MiB virtual disk, supporting 8,192 blocks with 4KB granularity and 16 MiB maximum file sizes.',
-      'Developed a comprehensive file system library providing core POSIX-like APIs: open, close, create, delete, read, write, lseek, and truncate.',
-      'Optimized storage architecture to achieve 95% volume efficiency, enabling the storage of 31.2 MiB of file content on a 32 MiB partition by minimizing metadata overhead.',
-      'Implemented a robust metadata layer featuring a Superblock for system configuration and a Directory structure for managing persistent file descriptors.',
-      'Designed linked-list block allocation strategies to eliminate external fragmentation and ensure efficient disk space reclamation during file deletion.'
-    ],
-    technologies: ['C', 'Make', 'Linux', 'GDB', 'Bash', 'Operating Systems'],
-    tags: ['C', 'Systems'],
-    githubUrl: 'https://github.com/varshasing/File-System',
-    image: '/FAT-os.png',
-  },
-  {
-    id: '9',
-    title: 'Dual-Tone Multi-Frequency (DTMF) Signaling & Filter Bank Decoder',
-    shortDescription: 'A MATLAB-based study of DTMF signal processing. Developed a telecommunications system for generating and decoding dual-tone multi-frequency signals.',
-    fullDescription: [
-      'Synthesized Dual-Tone Multi-Frequency (DTMF) signals by combining low-group and high-group sinusoids to simulate standard telephone dialing tones.',
-      'Applied the Continuous-Time Fourier Transform (CTFT) in MATLAB to analyze the frequency spectra of keypad tones and verify signal components in the voice frequency band.',
-      'Engineered a multi-stage filter bank using custom-designed Bandpass Filters (BPF) to isolate unique low-group and high-group frequencies from composite keypad signals.',
-      'Developed a decoding logic that identifies dialed digits by comparing energy magnitudes across the filter bank outputs.',
-      'Integrated the tone generator and filter bank into a functional decoding system, validated through testing against all telephone keypad characters (0-9, *, #).'
-    ],
-    technologies: ['MATLAB', 'Signal Processing', 'Telecommunications'],
-    tags: ['MATLAB', 'Signal Processing'],
-    githubUrl: 'https://github.com/varshasing/dtmf-decoder',
-    image: '/dtmf-keypad.jpg',
-  },
-  {
-    id: '10',
-    title: '5-Stage Pipelined RISC-V CPU Implementation in Verilog',
-    shortDescription: 'Behavioral Verilog implementation of a RISC-V-style CPU featuring a Hazard Detection Unit and data forwarding.',
-    fullDescription: [
-      'Implemented a 5-stage pipelined CPU architecture (Fetch, Decode, Execute, Memory, Write-back) in behavioral Verilog to maximize instruction throughput.',
-      'Implemented a Data Forwarding Unit to resolve "read-after-write" (RAW) hazards, allowing the CPU to use results before they are formally written to the register file.',
-      'Designed a Hazard Detection Unit (HDU) to manage load-use dependencies and control hazards by injecting pipeline stalls (bubbles) only when necessary.',
-      'Optimized execution efficiency by minimizing cycles-per-instruction (CPI) through the elimination of redundant stalls and stale data overrides.',
-      'Validated architectural integrity through simulation, passing a comprehensive suite of test cases to verify instruction timing and register consistency.'
-    ],
-    technologies: ['Verilog', 'Digital Logic', 'Computer Architecture'],
-    tags: ['Systems', 'Verilog'],
-    image: '/forwarding-413.png',
-  },
-  {
-    id: '11',
-    title: 'Reinforcement Learning-Based Blackjack Agent',
-    shortDescription: 'Q-Learning agent optimized for Blackjack through state-space modeling and reward engineering.',
-    fullDescription: [
-      'Developed an autonomous Blackjack agent in Python using a Q-Learning reinforcement learning algorithm to optimize decision-making strategies.',
-      'Architected a comprehensive state-space representation tracking hand values, dealer up-cards, and the distinction between hard and soft aces.',
-      'Engineered a reward structure and hyperparameter tuning process to balance exploration and exploitation, simulating over 10,000 game iterations.',
-      'Achieved a 42.1% win rate, successfully matching academic benchmarks for optimal basic strategy and reinforcement learning performance.',
-      'Built a custom testing environment in Jupyter/Google Colab to analyze convergence metrics and visualize the agent’s learned policy over time.'
-    ],
-    technologies: ['Python', 'Reinforcement Learning', 'Machine Learning'],
-    tags: ['Machine Learning', 'Python'],
-    githubUrl: 'https://github.com/varshasing/rl-blackjack-agent',
-    image: '/rl-blackjack.png',
-  },
-  {
-    id: '12',
-    title: 'Speech to Emotion Recognition (SER) using Deep Learning',
-    shortDescription: 'Classifying 6 emotions in English speaking audio with various Neural Network architectures. Achieved 74.3% test accuracy with hybrid Mamba-CNN model.',
-    fullDescription: [
-      'Developed a deep learning pipeline to classify six distinct vocal emotions (Anger, Disgust, Fear, Happiness, Sadness, Neutrality) from English-language audio datasets.',
-      'Architected and evaluated multiple neural network configurations, including CNN-GRU, ResNet, CNN-Transformer, and State Space Model (SSM) variants like Mamba.',
-      'Engineered a hybrid Mamba-CNN model that achieved a 74.3% test accuracy, outperforming the baseline CNN by 1.29% through improved long-range dependency modeling.',
-      'Implemented specialized audio preprocessing routines to extract features from raw waveforms, ensuring compatibility across diverse architectural inputs.',
-    ],
-    technologies: ['Python', 'Audio Preprocessing', 'Machine Learning', 'PyTorch', 'State Space Model', 'CNN', 'Transformer'],
-    tags: ['Machine Learning', 'Python', 'Signal Processing'],
-    githubUrl: 'https://github.com/Anish701/EC523-Speech-Emotion-Recognition',
-    image: '/ser.jpg',
-  },
-  {
-    id: '13',
+    id: '4',
     title: 'Implementing and Optimizing Ray Tracing in C++ / CUDA',
     shortDescription: 'Optimizing "Ray Tracing in One Weekend" serial implementation with parallelization and GPU optimizations, achieving ~ 2.5x and 150x speedups.',
     fullDescription: [
@@ -224,7 +82,23 @@ const projects: Project[] = [
     image: '/ray-tracing.png',
   },
   {
-    id: '14',
+    id: '5',
+    title: 'StockApp',
+    shortDescription: 'Distributed stock analytics application with real-time processing using a microservices architecture in Java.',
+    fullDescription: [
+      'Redesigned monolithic stock application into distributed microservices in Java, enabling real-time processing of user-subscribed stock data from Finnhub API with improved scalability and system modularity.',
+      'Migrated internal event delivery pipelines to AWS SQS to support scalable and reliable data transfer and asynchronous communication between microservices.',
+      'Designed and developed a responsive React frontend using TypeScript, enabling users to access real-time stock calculations and interactive visualizations.',
+      'Deployed on AWS Lightsail and implemented unit/service testing (JUnit, ViTest) to create CI/CD pipelines with GitHub Actions.',
+      'Developed and optimized core REST APIs, added monitoring hooks and multiple backend persistences (file + SQLite) to ensure reliability across restarts and deployments.',
+    ],
+    technologies: ['Java', 'CI/CD', 'AWS SQS', 'AWS Lightsail', 'React', 'TypeScript', 'REST APIs', 'SQLite'],
+    tags: ['Full-Stack', 'Java'],
+    githubUrl: 'https://github.com/varshasing/StockApp',
+    image: '/stockapp-diagram.png',
+  },
+  {
+    id: '6',
     title: 'Remote-Controlled Quadruped with Live Camera Feed and GUI Control',
     shortDescription: 'Low-latency remote control system for the HiWonder PuppyPi featuring LiDAR-based collision avoidance and live MJPG streaming.',
     fullDescription: [
@@ -240,7 +114,22 @@ const projects: Project[] = [
     image: '/puppy-pi.jpeg',
   },
   {
-    id: '15',
+    id: '7',
+    title: 'Speech to Emotion Recognition (SER) using Deep Learning',
+    shortDescription: 'Classifying 6 emotions in English speaking audio with various Neural Network architectures. Achieved 74.3% test accuracy with hybrid Mamba-CNN model.',
+    fullDescription: [
+      'Developed a deep learning pipeline to classify six distinct vocal emotions (Anger, Disgust, Fear, Happiness, Sadness, Neutrality) from English-language audio datasets.',
+      'Architected and evaluated multiple neural network configurations, including CNN-GRU, ResNet, CNN-Transformer, and State Space Model (SSM) variants like Mamba.',
+      'Engineered a hybrid Mamba-CNN model that achieved a 74.3% test accuracy, outperforming the baseline CNN by 1.29% through improved long-range dependency modeling.',
+      'Implemented specialized audio preprocessing routines to extract features from raw waveforms, ensuring compatibility across diverse architectural inputs.',
+    ],
+    technologies: ['Python', 'Audio Preprocessing', 'Machine Learning', 'PyTorch', 'State Space Model', 'CNN', 'Transformer'],
+    tags: ['Machine Learning', 'Python', 'Signal Processing'],
+    githubUrl: 'https://github.com/Anish701/EC523-Speech-Emotion-Recognition',
+    image: '/ser.jpg',
+  },
+  {
+    id: '8',
     title: 'Kernel-Space Traffic Light Controller',
     shortDescription: 'Linux kernel module for real-time GPIO control and interrupt handling on BeagleBone Black.',
     fullDescription: [
@@ -257,24 +146,7 @@ const projects: Project[] = [
     image: '/traffic-embedded.png',
   },
   {
-    id: '16',
-    title: 'High Performance Programming',
-    shortDescription: 'A series of projects and technical writeupts exploring high-performance programming techniques focused on hardware-aware optimization, spanning SIMD vectorization, memory hierarchies, parallelism, and GPU acceleration.',
-    fullDescription: [
-      'Conducted deep-dive performance analysis of x86_64 microarchitectures, utilizing RDTSC-based timing calibration and Roofline Modeling to identify Arithmetic Intensity (AI) bottlenecks.',
-      'Optimized memory-bound operations (MMM and Matrix Transpose) by implementing loop interchange, tiling (blocking), and padding to maximize L1/L2 cache hit rates and memory bandwidth utilization.',
-      'Engineered high-throughput data processing routines using AVX/SSE intrinsics, leveraging SIMD vectorization and loop unrolling to achieve near-theoretical peak CPE (Cycles Per Element).',
-      'Developed scalable parallel applications using PThreads and OpenMP, performing sensitivity analysis on thread synchronization overhead, load balancing, and Shared Address Space limitations.',
-      'Architected GPU-accelerated solvers for 2D Successive Over-Relaxation (SOR) and Matrix Multiplication, optimizing for global memory coalescing and shared memory bank conflict resolution.',
-      'Implemented advanced algorithmic transformations including Red/Black SOR decomposition, branch promotion, and reassociative transformations to bypass pipeline latencies and branch mispredictions.'
-    ],
-    technologies: ['C', 'CUDA', 'OpenMP', 'PThreads', 'AVX/SSE Intrinsics', 'Performance Analysis'],
-    tags: ['Systems', 'C', 'CUDA'],
-    githubUrl: 'https://github.com/varshasing/high-performance-programming',
-    image: '/EC527-LabCover.png',
-  },
-  {
-    id: '17',
+    id: '9',
     title: 'Linux Kernel Asynchronous Timer',
     shortDescription: 'Custom kernel module and user-space utility implementing SIGIO asynchronous notifications and procfs status monitoring.',
     fullDescription: [
@@ -291,7 +163,103 @@ const projects: Project[] = [
     image: '/tux.png',
   },
   {
-    id: '18',
+    id: '10',
+    title: 'Custom POSIX Threads Library Implementation in C',
+    shortDescription: 'User-level POSIX threads API in C with preemptive scheduling, multithreading, inter-thread communication, and thread-local-storage with COW (copy-on-write).',
+    fullDescription: [
+      'Developed a comprehensive user-level threading library in C, featuring a Round Robin preemptive scheduler and context switching for high-performance concurrency.',
+      'Architected a paged memory management unit (MMU) from scratch, implementing custom page fault handlers and a Copy-on-Write (CoW) optimization for efficient resource sharing.',
+      'Engineered robust synchronization primitives (semaphores), utilizing atomic operations to ensure thread safety and prevent race conditions in multi-threaded execution.',
+      'Implemented Thread-Local Storage (TLS) and custom stack allocation logic, managing memory boundaries to prevent stack overflows and ensure process-level isolation.',
+      'Automated a rigorous verification suite using Bash and Make, conducting stress tests for memory integrity and deadlock detection to validate system reliability under high concurrency.'
+    ],
+    technologies: ['C', 'Make', 'Linux', 'GDB', 'Bash', 'Operating Systems'],
+    tags: ['C', 'Systems'],
+    githubUrl: 'https://github.com/stars/varshasing/lists/operating-systems',
+    image: '/tls-os.png',
+  },
+  {
+    id: '11',
+    title: 'Custom File System Implementation in C',
+    shortDescription: 'Implemented a simplified file system in C using a Windows-style File Allocation Table architecture. Supports core file operations and simulates a virtual disk environment for testing.',
+    fullDescription: [
+      'Engineered a custom File Allocation Table (FAT) file system on a 32 MiB virtual disk, supporting 8,192 blocks with 4KB granularity and 16 MiB maximum file sizes.',
+      'Developed a comprehensive file system library providing core POSIX-like APIs: open, close, create, delete, read, write, lseek, and truncate.',
+      'Optimized storage architecture to achieve 95% volume efficiency, enabling the storage of 31.2 MiB of file content on a 32 MiB partition by minimizing metadata overhead.',
+      'Implemented a robust metadata layer featuring a Superblock for system configuration and a Directory structure for managing persistent file descriptors.',
+      'Designed linked-list block allocation strategies to eliminate external fragmentation and ensure efficient disk space reclamation during file deletion.'
+    ],
+    technologies: ['C', 'Make', 'Linux', 'GDB', 'Bash', 'Operating Systems'],
+    tags: ['C', 'Systems'],
+    githubUrl: 'https://github.com/varshasing/File-System',
+    image: '/FAT-os.png',
+  },
+  {
+    id: '12',
+    title: 'Custom POSIX Shell Implementation in C',
+    shortDescription: 'A Bash Shell implemented in C supporting command execution, redirecting standard I/O to files, pipes, and background processes.',
+    fullDescription: [
+      'Developed robust Unix-like shell in C using the Read-Eval-Print Loop (REPL) paradigm to manage process lifecycles, synchronization, and system-level execution.',
+      'Implemented advanced process control using "fork-and-exec" mechanics, managing child process creation and utilizing "waitpid" to prevent the creation of zombie processes.',
+      'Developed a multi-stage execution pipeline supporting standard I/O redirection (>, <) and Unix pipes (|) by manipulating file descriptor tables via "dup2" and "pipe" system calls.',
+      'Architected a custom string-tokenization engine to parse complex user commands, handling variable arguments and escape characters while maintaining strict memory safety.',
+      'Integrated asynchronous signal handling (SIGCHLD) to manage background process execution and resource reclamation without interrupting the primary user interface.'
+    ],
+    technologies: ['C', 'Linux', 'GDB', 'Make'],
+    tags: ['C', 'Systems'],
+    githubUrl: 'https://github.com/varshasing/SimpleShell',
+    image: '/shell.png',
+  },
+  {
+    id: '13',
+    title: '5-Stage Pipelined RISC-V CPU Implementation in Verilog',
+    shortDescription: 'Behavioral Verilog implementation of a RISC-V-style CPU featuring a Hazard Detection Unit and data forwarding.',
+    fullDescription: [
+      'Implemented a 5-stage pipelined CPU architecture (Fetch, Decode, Execute, Memory, Write-back) in behavioral Verilog to maximize instruction throughput.',
+      'Implemented a Data Forwarding Unit to resolve "read-after-write" (RAW) hazards, allowing the CPU to use results before they are formally written to the register file.',
+      'Designed a Hazard Detection Unit (HDU) to manage load-use dependencies and control hazards by injecting pipeline stalls (bubbles) only when necessary.',
+      'Optimized execution efficiency by minimizing cycles-per-instruction (CPI) through the elimination of redundant stalls and stale data overrides.',
+      'Validated architectural integrity through simulation, passing a comprehensive suite of test cases to verify instruction timing and register consistency.'
+    ],
+    technologies: ['Verilog', 'Digital Logic', 'Computer Architecture'],
+    tags: ['Systems', 'Verilog'],
+    image: '/forwarding-413.png',
+  },
+  {
+    id: '14',
+    title: 'Reinforcement Learning-Based Blackjack Agent',
+    shortDescription: 'Q-Learning agent optimized for Blackjack through state-space modeling and reward engineering.',
+    fullDescription: [
+      'Developed an autonomous Blackjack agent in Python using a Q-Learning reinforcement learning algorithm to optimize decision-making strategies.',
+      'Architected a comprehensive state-space representation tracking hand values, dealer up-cards, and the distinction between hard and soft aces.',
+      'Engineered a reward structure and hyperparameter tuning process to balance exploration and exploitation, simulating over 10,000 game iterations.',
+      'Achieved a 42.1% win rate, successfully matching academic benchmarks for optimal basic strategy and reinforcement learning performance.',
+      'Built a custom testing environment in Jupyter/Google Colab to analyze convergence metrics and visualize the agent’s learned policy over time.'
+    ],
+    technologies: ['Python', 'Reinforcement Learning', 'Machine Learning'],
+    tags: ['Machine Learning', 'Python'],
+    githubUrl: 'https://github.com/varshasing/rl-blackjack-agent',
+    image: '/rl-blackjack.png',
+  },
+  {
+    id: '15',
+    title: 'High Performance Programming',
+    shortDescription: 'A series of projects and technical writeupts exploring high-performance programming techniques focused on hardware-aware optimization, spanning SIMD vectorization, memory hierarchies, parallelism, and GPU acceleration.',
+    fullDescription: [
+      'Conducted deep-dive performance analysis of x86_64 microarchitectures, utilizing RDTSC-based timing calibration and Roofline Modeling to identify Arithmetic Intensity (AI) bottlenecks.',
+      'Optimized memory-bound operations (MMM and Matrix Transpose) by implementing loop interchange, tiling (blocking), and padding to maximize L1/L2 cache hit rates and memory bandwidth utilization.',
+      'Engineered high-throughput data processing routines using AVX/SSE intrinsics, leveraging SIMD vectorization and loop unrolling to achieve near-theoretical peak CPE (Cycles Per Element).',
+      'Developed scalable parallel applications using PThreads and OpenMP, performing sensitivity analysis on thread synchronization overhead, load balancing, and Shared Address Space limitations.',
+      'Architected GPU-accelerated solvers for 2D Successive Over-Relaxation (SOR) and Matrix Multiplication, optimizing for global memory coalescing and shared memory bank conflict resolution.',
+      'Implemented advanced algorithmic transformations including Red/Black SOR decomposition, branch promotion, and reassociative transformations to bypass pipeline latencies and branch mispredictions.'
+    ],
+    technologies: ['C', 'CUDA', 'OpenMP', 'PThreads', 'AVX/SSE Intrinsics', 'Performance Analysis'],
+    tags: ['Systems', 'C', 'CUDA'],
+    githubUrl: 'https://github.com/varshasing/high-performance-programming',
+    image: '/EC527-LabCover.png',
+  },
+  {
+    id: '16',
     title: 'FPGA Arithmetic Logic Unit Calculator',
     shortDescription: '15-operation hardware ALU implemented on a Xilinx NEXYS A7 FPGA using Verilog HDL, featuring overflow detection and seven-segment display multiplexing.',
     fullDescription: [
@@ -306,7 +274,7 @@ const projects: Project[] = [
     image: '/fpga.jpg',
   },
   {
-    id: '19',
+    id: '17',
     title: 'MunchMap Odyssey - Foodie Road Trip Planner',
     shortDescription: 'A Flask-based road trip planner tailored for food enthusiasts. The app recommends specific restaurants along a personalized route based on user preferences with the ability to export the itinerary to Google Maps for a seamless travel experience.',
     fullDescription: [
@@ -322,7 +290,7 @@ const projects: Project[] = [
     image: '/munchmap.png',
   },
   {
-    id: '20',
+    id: '18',
     title: 'Assistive Smart Desk Lamp',
     shortDescription: 'An accessible, zero-force lighting solution for users with limited dexterity, featuring automated ambient sensing and customized 3D-printed housing.',
     fullDescription: [
@@ -338,7 +306,7 @@ const projects: Project[] = [
     image: '/lamp-210.jpg',
   },
   {
-    id: '21',
+    id: '19',
     title: 'Smart Ambient Temperature Monitor',
     shortDescription: 'I2C-integrated environmental monitor featuring a digital twin simulation, CAD-optimized housing, and real-time safety alerting.',
     fullDescription: [
@@ -353,6 +321,38 @@ const projects: Project[] = [
     tags: ['Systems', 'Hardware', 'C++', 'CAD'],
     githubUrl: 'https://github.com/varshasing/Ambient-Temperature-Monitor',
     image: '/temperature-box.png',
+  },
+  {
+    id: '20',
+    title: 'Jailbreaking Large Language Models',
+    shortDescription: 'Comparitive analysis of vulnerabilities in chatbots with PAIR. Developed a modular defense framework, delivering safe responses for 79% of jailbreaking prompts.',
+    fullDescription: [
+      'Implemented the PAIR (Prompt Automatic Iterative Refinement) framework, achieving highly efficient black-box "jailbreaking" of LLMs in under 20 queries.',
+      'Architected an adversarial multi-agent system where an "Attacker LLM" iteratively refines semantic prompts to bypass the safety guardrails of a "Target LLM," overseen by a "Judge LLM."',
+      'Developed a modular defense framework integrating prompt validation and real-time response filtering, successfully mitigating unsafe outputs for 79% of identified adversarial patterns.',
+      'Conducted a comparative vulnerability assessment using the AdvBench and JailbreakBench datasets to quantify the success rates and transferability of semantic attacks across open and closed-source models.',
+      'Containerized the experimentation environment using Docker and integrated Weights & Biases (WandB) for real-time telemetry and logging of adversarial iterative refinement cycles.'
+    ],
+    technologies: ['Python', 'Docker', 'WandB', 'API Integration'],
+    tags: ['Python', 'Cybersecurity'],
+    githubUrl: 'https://github.com/pzhao0/PAIR',
+    image: '/jailbreaking-llms.png',
+  },
+  {
+    id: '21',
+    title: 'Dual-Tone Multi-Frequency (DTMF) Signaling & Filter Bank Decoder',
+    shortDescription: 'A MATLAB-based study of DTMF signal processing. Developed a telecommunications system for generating and decoding dual-tone multi-frequency signals.',
+    fullDescription: [
+      'Synthesized Dual-Tone Multi-Frequency (DTMF) signals by combining low-group and high-group sinusoids to simulate standard telephone dialing tones.',
+      'Applied the Continuous-Time Fourier Transform (CTFT) in MATLAB to analyze the frequency spectra of keypad tones and verify signal components in the voice frequency band.',
+      'Engineered a multi-stage filter bank using custom-designed Bandpass Filters (BPF) to isolate unique low-group and high-group frequencies from composite keypad signals.',
+      'Developed a decoding logic that identifies dialed digits by comparing energy magnitudes across the filter bank outputs.',
+      'Integrated the tone generator and filter bank into a functional decoding system, validated through testing against all telephone keypad characters (0-9, *, #).'
+    ],
+    technologies: ['MATLAB', 'Signal Processing', 'Telecommunications'],
+    tags: ['MATLAB', 'Signal Processing'],
+    githubUrl: 'https://github.com/varshasing/dtmf-decoder',
+    image: '/dtmf-keypad.jpg',
   },
 ];
 
@@ -479,7 +479,9 @@ export const ProjectsSection = () => {
             Things I've <span className="gradient-text">Built</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects spanning embedded systems, robotics, and web development.
+            A collection of projects spanning systems, robotics, and full-stack development.
+            <br></br>
+            Use the tags below to filter by technology or domain!
           </p>
         </div>
 

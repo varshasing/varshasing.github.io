@@ -61,9 +61,6 @@ export const Navigation = () => {
                 {item.label}
               </Button>
             ))}
-            <Button variant="glow" className="ml-4">
-              Resume
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,9 +89,6 @@ export const Navigation = () => {
                   {item.label}
                 </Button>
               ))}
-              <Button variant="glow" className="mt-2">
-                Resume
-              </Button>
             </div>
           </div>
         )}
