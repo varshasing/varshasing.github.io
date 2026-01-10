@@ -1,5 +1,7 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
+const email = ["varshasinghtx", "gmail.com"].join("@");
+
 export const Footer = () => {
   return (
     <footer className="py-12 border-t border-border/50">
@@ -24,7 +26,7 @@ export const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:varshasinghtx@gmail.com"
+              href={`mailto:${email}?subject=ACTION%20REQUIRED%3A%20Reaching%20Out%20From%20Website%21`}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />

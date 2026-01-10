@@ -34,12 +34,12 @@ const projects: Project[] = [
   {
     id: '2',
     title: 'Cloud-Native Medical Imaging Pipeline',
-    shortDescription: 'An automated cloud-native neuroimaging pipeline on Openshift and workflow translation tool (tektonx), improving reproducibility and interoperability.',
+    shortDescription: 'An automated cloud-native neuroimaging pipeline on OpenShift and workflow translation tool (tektonx), improving reproducibility and interoperability.',
     fullDescription: [
       'Architected an automated, event-driven neuroimaging pipeline on Red Hat OpenShift, integrating Orthanc (PACS) with Tekton to automate DICOM-to-NIFTI processing and AI-driven brain masking.',
       'Developed tektonx, a Python-based "Rosetta Stone" translation tool that compiles Tekton YAML into multiple workflow languages including SLURM, Nextflow, Snakemake, SunGrid Engine, and Argo.',
-      'Engineered an event-driven triggr using Lua scripting within Orthanc to automatically initiatie Kubernetes-native PipelineRuns upon medical image ingestion.',
-      'Implemented containerizeed neuroimaging modules (pl-emerald, pl-dcm2niix), ensuring deterministic execution and computational reproducibility across HPC and Cloud environments.',
+      'Engineered an event-driven trigger using Lua scripting within Orthanc to automatically initiate Kubernetes-native PipelineRuns upon medical image ingestion.',
+      'Implemented containerized neuroimaging modules (pl-emerald, pl-dcm2niix), ensuring deterministic execution and computational reproducibility across HPC and Cloud environments.',
       'Optimized research workflows for scalability by leveraging Kubernetes CRDs, Persistent Volume Claims (PVCs), and isolated pod environments for concurrent data processing.',
     ],
     technologies: ['Kubernetes', 'Docker', 'OpenShift', 'Tekton', 'Lua', 'Bash', 'Python', 'Orthanc'],
@@ -84,7 +84,7 @@ const projects: Project[] = [
   {
     id: '5',
     title: 'StockApp',
-    shortDescription: 'Distributed stock analytics application with real-time processing using a microservices architecture in Java.',
+    shortDescription: 'Distributed stock analytics application with real-time processing using a microservice architecture in Java.',
     fullDescription: [
       'Redesigned monolithic stock application into distributed microservices in Java, enabling real-time processing of user-subscribed stock data from Finnhub API with improved scalability and system modularity.',
       'Migrated internal event delivery pipelines to AWS SQS to support scalable and reliable data transfer and asynchronous communication between microservices.',

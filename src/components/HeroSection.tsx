@@ -1,6 +1,8 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const email = ["varshasinghtx", "gmail.com"].join("@");
+
 export const HeroSection = () => {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -56,7 +58,7 @@ export const HeroSection = () => {
               </Button>
               </a>
 
-              <a href="mailto:varshasinghtx@gmail.com">
+              <a href={`mailto:${email}?subject=ACTION%20REQUIRED%3A%20Reaching%20Out%20From%20Website%21`}>
               <Button variant="glass" size="icon" className="hover:glow-box">
                 <Mail className="h-5 w-5" />
               </Button>
