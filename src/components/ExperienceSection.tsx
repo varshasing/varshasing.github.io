@@ -37,9 +37,10 @@ const experiences: Experience[] = [
     role: 'Teaching Assistant',
     period: 'Aug 2023 - Present',
     location: 'Boston, MA',
-    shortDescription: 'Mentored 1000+ students through 12 engineering course offerings in C, C++, Verilog, Assembly, Python, and MATLAB. (Courses listed below)',
+    shortDescription: 'Mentored 100+ students through 13 engineering course offerings in C, C++, Verilog, Assembly, Python, and MATLAB. (Courses listed below)',
     fullDescription: [
-      'Courses: ENG EC535: Embedded Systems, ENG EC523: Deep Learning, ENG EC444: Smart and Connected Systems, ENG EC414 (x2): Machine Learning, ENG EC413: Computer Organization, ENG EC330 (2x): Applied Algorithms and Data Structures, ENG EK122 (2x): Programming for Engineers, ENG EK121 (2x): Introduction to Programming.',
+      'Graduate Courses: ENG EC535: Embedded Systems, ENG EC523: Deep Learning',
+      'Undergraduate Courses: ENG EC444: Smart and Connected Systems, ENG EC414: Machine Learning [2x], ENG EC413: Computer Organization, ENG EC330: Applied Algorithms and Data Structures [2x], ENG EC311: Introduction to Logic Design; ENG EK122: Programming for Engineers [2x], ENG EK121: Introduction to Programming [2x].',
       'Led weekly discussions and lab sessions, clarifying complex concepts in embedded systems, computer architecture, and digital logic design.',
       'Automated grading tools in Bash / Python, cutting grading time by ~65% and ensuring consistency across graders.',
       'Conducted code reviews and delivered feedback to students on debugging, refactoring, and test-driven development.',

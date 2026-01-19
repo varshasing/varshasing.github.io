@@ -31,7 +31,7 @@ export const HeroSection = () => {
               <span className="text-primary"> cloud computing</span> / <span className="text-primary"> modern software development</span>. 
               I love building things at the intersection of hardware and software, and will help a billion people with my work!
               <br></br>
-              Currently seeking full-time opportunities for Fall 2025 and beyond. Feel free to reach out via <span className="text-primary">email</span> or <span className="text-primary">LinkedIn</span>!
+              Currently seeking full-time opportunities for <span className="text-primary">Fall 2026</span> and beyond. Feel free to reach out via <span className="text-primary">email</span> or <span className="text-primary">LinkedIn</span>!
             </p>
 
             {/* CTA Buttons */}
