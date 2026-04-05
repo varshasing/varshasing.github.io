@@ -19,12 +19,41 @@ const Product = () => {
             </p>
           </div>
           <div className="aspect-square rounded-2xl bg-card border-2 border-border flex items-center justify-center">
-            <Bot className="w-32 h-32 text-primary animate-float" />
+            <img
+              src="/Boston_University_Team1_Photo.PNG"
+              alt="NurseAid robot in a Photonics 4th floor hallway, showing its compact design and touchscreen interface"
+              className="w-full h-full object-cover rounded-xl"
+            />
           </div>
         </div>
       </SectionWrapper>
 
       <SectionWrapper variant="warm">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">How NurseAid Is Used</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A quick comic-style walkthrough of a real delivery moment from request to handoff.
+          </p>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
+          className="rounded-2xl border-2 border-border bg-card p-4 md:p-6"
+        >
+          <img
+            src="/nurseaid_comic.png"
+            alt="Comic showing a nurse requesting supplies, NurseAid navigating a hallway, and completing delivery"
+            className="w-full h-auto rounded-xl"
+          />
+          <p className="text-xs md:text-sm text-muted-foreground mt-4 text-center">
+            Example of NurseAid's Impact. Image generated with Gemini.
+          </p>
+        </motion.div>
+      </SectionWrapper>
+
+      <SectionWrapper variant="cream">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Key Features</h2>
         </div>
@@ -53,7 +82,7 @@ const Product = () => {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper variant="warm">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Who It's For</h2>
         </div>

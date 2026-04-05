@@ -24,8 +24,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <nav className="fixed top-0 left-0 right-0 z-50 nav-dark">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-14 section-padding">
           <Link to="/" className="flex items-center gap-2.5 font-display font-bold text-lg text-nav-foreground">
-            <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm font-bold">
-              N
+            <span className="w-8 h-8 flex items-center justify-center">
+              <img src="/nurseaid_logo.png" alt="NurseAid Logo" className="w-full h-full object-contain" />
             </span>
             NurseAid
           </Link>
@@ -93,12 +93,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex items-center gap-2 text-nav-foreground">
               <span className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold">N</span>
               <span className="font-display font-semibold">NurseAid</span>
-              <span className="text-nav-foreground/50 text-sm">· Boston University Capstone 2025</span>
+              <span className="text-nav-foreground/50 text-sm">· Boston University Capstone 2025-2026</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-nav-foreground/50">
               <Link to="/team" className="hover:text-nav-foreground transition-colors">Team</Link>
               <Link to="/resources" className="hover:text-nav-foreground transition-colors">Resources</Link>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-nav-foreground transition-colors">GitHub</a>
+              <a href="https://github.com/varshasing/EC463_Team_18_Team_Autonomous_Delivery_Robot" target="_blank" rel="noopener noreferrer" className="hover:text-nav-foreground transition-colors">GitHub</a>
             </div>
           </div>
         </div>

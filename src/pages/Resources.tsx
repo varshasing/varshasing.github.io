@@ -5,7 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 const resources = [
   { icon: Github, label: "GitHub Repository", desc: "Source code, documentation, and setup guides", href: "https://github.com", external: true },
   { icon: FileText, label: "PDF Manual", desc: "Complete system documentation and user manual", href: "#", external: false },
-  { icon: Play, label: "Demo Video", desc: "Watch NurseAid in action during live testing", href: "#", external: false },
+  { icon: Play, label: "Demo Video", desc: "Watch NurseAid in action during live testing", href: "https://drive.google.com/file/d/1qTXZyEEdu-NiZEI4107baHkfbzRLYCP5/view?usp=drive_link", external: true },
 ];
 
 const Resources = () => {
@@ -40,7 +40,7 @@ const Resources = () => {
               <h3 className="font-display font-semibold text-lg">{item.label}</h3>
               <p className="text-muted-foreground text-sm">{item.desc}</p>
             </div>
-            <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors"/>
           </motion.a>
         ))}
       </div>

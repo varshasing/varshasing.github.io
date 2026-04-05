@@ -17,10 +17,10 @@ const Index = () => {
           >
             <div className="scarlet-badge mx-auto">
               <Activity className="w-3 h-3" />
-              Boston University · Robotics Capstone
+              Boston University · Department of Electrical and Computer Engineering Capstone
             </div>
 
-            <Bot className="w-20 h-20 text-primary mx-auto animate-float" />
+            <img src="/nurseaid_logo.png" alt="NurseAid Logo" className="w-20 h-20 object-contain mx-auto animate-float" />
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05]">
               Give Nurses{" "}
@@ -29,7 +29,7 @@ const Index = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Your autonomous hospital delivery assistant for accessible healthcare.
+              The autonomous hospital delivery assistant championing safe healthcare for patients and providers.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">
@@ -60,6 +60,16 @@ const Index = () => {
           <p className="text-muted-foreground text-lg max-w-lg mx-auto">
             NurseAid automates routine deliveries across hospital environments.
           </p>
+          <div>
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/22111656/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-foreground/15 text-foreground font-semibold text-sm hover:border-primary/30 hover:bg-surface-highlight transition-colors"
+            >
+              View Supporting Research <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </SectionWrapper>
 
@@ -165,13 +175,18 @@ const Index = () => {
       {/* Section 6 — Demo Callout */}
       <SectionWrapper>
         <div className="text-center space-y-6">
-          <div className="max-w-2xl mx-auto aspect-video rounded-2xl border-2 border-border bg-card flex items-center justify-center">
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 rounded-full bg-scarlet-soft flex items-center justify-center mx-auto animate-pulse-scarlet">
-                <Play className="w-8 h-8 text-primary" />
-              </div>
-              <p className="text-muted-foreground text-sm font-medium">Watch NurseAid complete a delivery in real time</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative w-full aspect-video rounded-2xl border-2 border-border bg-card overflow-hidden">
+              <iframe
+                src="https://drive.google.com/file/d/1qTXZyEEdu-NiZEI4107baHkfbzRLYCP5/preview"
+                title="NurseAid Demo Video"
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; fullscreen"
+              />
             </div>
+            <p className="text-muted-foreground text-sm font-medium mt-4">
+              Watch NurseAid's video featuring testimonials from people in patient-facing roles and footage of the robot in action during live testing.
+            </p>
           </div>
         </div>
       </SectionWrapper>
